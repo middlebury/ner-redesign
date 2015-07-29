@@ -1,6 +1,8 @@
 .featured-content .entry {
     margin-bottom: 20px;
     padding: 0 0 24px;
+
+    @include innerBorder();
 }
 
 .featured-content .entry-title {

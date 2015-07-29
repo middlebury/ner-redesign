@@ -28,20 +28,8 @@
     font-size: 17px;
     background-color: $beige;
     padding: 30px 40px;
-    position: relative;
-
-    &:after {
-        position: absolute;
-        width: auto;
-        height: auto;
-        left: 5px;
-        top: 5px;
-        right: 5px;
-        bottom: 5px;
-        border: 2px solid $black;
-        content: '';
-        display: block;
-    }
+    
+    @include innerBorder();
 
     &:focus,
     &:hover {
