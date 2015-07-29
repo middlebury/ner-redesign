@@ -28,6 +28,7 @@
     font-size: 17px;
     background-color: $beige;
     padding: 30px 40px;
+    display: inline-block;
     
     @include innerBorder();
 
