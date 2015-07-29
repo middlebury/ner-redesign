@@ -1,0 +1,18 @@
+@mixin innerBorder() {    
+    position: relative;
+    z-index: 2;
+
+    &:after {
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 5px;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 2px solid $black;
+        content: '';
+        display: block;
+        z-index: -1;
+    }
+}
