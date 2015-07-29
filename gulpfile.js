@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
 // will auto-update browsers
 gulp.task('sass', function () {
     return gulp.src('sass/*.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./'))
         .pipe(reload({stream:true}));
 });
