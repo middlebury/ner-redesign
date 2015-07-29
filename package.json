@@ -1,0 +1,29 @@
+{
+  "name": "ner-2015",
+  "version": "1.0.0",
+  "description": "NER2015",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.8.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/middleburydigitalservices/ner-redesign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/middleburydigitalservices/ner-redesign/issues"
+  },
+  "homepage": "https://github.com/middleburydigitalservices/ner-redesign#readme"
+}
