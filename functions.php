@@ -35,7 +35,7 @@ function agency_load_scripts() {
 	
 	wp_enqueue_style( 'dashicons' );
 	
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Spinnaker', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Roboto', array(), CHILD_THEME_VERSION );
 	
 }
 
