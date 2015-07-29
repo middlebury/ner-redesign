@@ -1,0 +1,37 @@
+.title-area {
+    float: left;
+    padding: 16px 0;
+    width: 300px;
+}
+
+.header-image .title-area {
+    padding: 0;
+}
+
+.header-image .site-title a {
+    cursor: pointer;
+}
+
+.site-title {
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.site-title a {
+    color: #fff;
+}
+
+.site-title a:hover {
+    color: #d7c603;
+}
+
+.site-description {
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+}

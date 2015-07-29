@@ -1,0 +1,78 @@
+
+.entry-pings,
+.comment-respond,
+.entry-comments {
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+
+.comment-content {
+    clear: both;
+}
+
+.entry-comments .comment-author {
+    margin-bottom: 0;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+    width: 50%
+}
+
+.comment-respond label {
+    display: block;
+    margin-right: 12px;
+}
+
+.comment-list li,
+.ping-list li {
+    list-style-type: none;
+}
+
+.comment-list li {
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+.comment-list li li {
+    margin-right: -32px;
+}
+
+li.comment {
+    border-left: 2px solid #f5f5f5;
+}
+
+.comment-header {
+    color: #333;
+    font-family: 'Spinnaker', sans-serif;
+}
+
+.comment .avatar {
+    margin: 0 16px 24px 0;
+}
+
+.comment-header  .comment-meta,
+.comment-header  .comment-meta a {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.comment-reply-link {
+    font-family: 'Spinnaker', sans-serif;
+    text-transform: uppercase;
+}
+
+.entry-pings .reply {
+    display: none;
+}
+
+.form-allowed-tags {
+    background-color: #f5f5f5;
+    font-size: 14px;
+    padding: 24px;
+}

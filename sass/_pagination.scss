@@ -1,0 +1,31 @@
+.archive-pagination {
+    clear: both;
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 14px;
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+
+.archive-pagination a {
+    color: #fff;
+}
+
+.archive-pagination li {
+    display: inline;
+}
+
+.archive-pagination li a {
+    background-color: #fff;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 8px 12px;
+}
+
+.archive-pagination li a:hover,
+.archive-pagination li.active a {
+    background-color: #d7c603;
+    color: #fff;
+}

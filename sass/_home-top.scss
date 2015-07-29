@@ -1,0 +1,50 @@
+.home-top .wrap {
+    color: #fff;
+    font-family: 'Spinnaker', sans-serif;
+    padding: 15% 0;
+    text-align: center;
+}
+
+.home-top .widget-title {
+    color: #fff;
+    font-size: 60px;
+    font-family: $font-family-serif;
+    line-height: 1;
+    // margin-top: 300px;
+    margin-bottom: 35px;
+}
+
+.home-top .textwidget h2 {
+    font-size: 24px;
+    font-family: $font-family-serif;
+    font-weight: normal;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 110px;
+}
+
+.home-top .button {
+    color: $black;
+    font-size: 17px;
+    background-color: $beige;
+    padding: 30px 40px;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 5px;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 2px solid $black;
+        content: '';
+        display: block;
+    }
+
+    &:focus,
+    &:hover {
+        background-color: $beige;
+    }
+}

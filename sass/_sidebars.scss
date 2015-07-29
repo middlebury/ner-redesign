@@ -1,0 +1,31 @@
+.sidebar {
+    color: #999;
+}
+
+.sidebar p:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar li {
+    list-style-type: none;
+    margin-bottom: 6px;
+}
+
+.sidebar ul > li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar .widget {
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+
+.sidebar .enews-widget {
+    background-color: #333;
+}
+
+.sidebar .enews-widget .widget-title {
+    color: #fff;
+}
