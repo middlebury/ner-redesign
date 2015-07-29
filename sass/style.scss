@@ -17,132 +17,16 @@
     License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
-
-/* Table of Contents
-
-    - HTML5 Reset
-        - Baseline Normalize
-        - Box Sizing
-        - Float Clearing
-    - Defaults
-        - Typographical Elements
-        - Headings
-        - Objects
-        - Gallery
-        - Forms
-        - Tables
-    - Structure and Layout
-        - Site Containers
-        - Column Widths and Positions
-        - Column Classes
-    - Common Classes
-        - WordPress
-        - Genesis
-        - Titles
-    - Widgets
-        - Featured Content
-    - Plugins
-        - Genesis eNews Extended
-        - Genesis Latest Tweets
-        - Gravity Forms
-        - Jetpack
-    - Site Header
-        - Title Area
-        - Widget Area
-    - Site Navigation
-        - Header Navigation
-        - Primary Navigation
-        - Secondary Navigation
-        - Responsive Menu
-    - Content Area
-        - Home Page
-        - Portfolio
-        - Entries
-        - After Entry
-        - Pagination
-        - Comments
-    - Sidebars
-    - Footer Widgets
-    - Site Footer
-    - Theme Colors
-        - Agency Pro Blue
-        - Agency Pro Green
-        - Agency Pro Orange
-        - Agency Pro Red
-    - Media Queries
-        - max-width: 1180px
-        - max-width: 1040px
-        - max-width: 800px
-        - max-width: 782px
-        - max-width: 680px
-        - max-width: 480px
-
-*/
-
-
-/*
-HTML5 Reset
----------------------------------------------------------------------------------------------------- */
-
-/* Baseline Reset (normalize.css 2.1.2)
-    normalize.css v2.1.2 | MIT License | git.io/normalize
---------------------------------------------- */
-
 @import 'normalize';
-
-/* Box Sizing
---------------------------------------------- */
-
 @import 'box-sizing';
-
-/* Float Clearing
---------------------------------------------- */
-
 @import 'clearfixes';
 
-
-/*
-Defaults
----------------------------------------------------------------------------------------------------- */
-
-/* Typographical Elements
---------------------------------------------- */
-
 @import 'typography';
-
-/* Headings
---------------------------------------------- */
-
 @import 'headings';
-
-/* Objects
---------------------------------------------- */
-
 @import 'objects';
-
-/* Gallery
---------------------------------------------- */
-
-
 @import 'gallery';
-
-/* Forms
---------------------------------------------- */
-
 @import 'forms';
-
-/* Tables
---------------------------------------------- */
-
 @import 'tables';
-
-/*
-Structure and Layout
----------------------------------------------------------------------------------------------------- */
-
-/* Site Containers
---------------------------------------------- */
-
 @import 'site-containers';
 
 /* Column Widths and Positions
@@ -165,17 +49,8 @@ Structure and Layout
     float: right;
 }
 
-/* Content */
-
 @import 'content';
-
-
-/* Primary Sidebar */
-
 @import 'primary-sidebar';
-
-/* Secondary Sidebar */
-
 @import 'secondary-sidebar';
 
 /* Column Classes
@@ -184,71 +59,19 @@ Structure and Layout
 
 @import 'columns';
 
-/*
-Common Classes
----------------------------------------------------------------------------------------------------- */
-
-/* WordPress
---------------------------------------------- */
-
 @import 'wordpress';
-
-/* Genesis
---------------------------------------------- */
-
 @import 'genesis';
 
-/* Titles
---------------------------------------------- */
-
 @import 'titles';
-
-
-/*
-Widgets
----------------------------------------------------------------------------------------------------- */
-
 @import 'widgets';
-
-/* Featured Content
---------------------------------------------- */
-
 @import 'featured-content';
 
-/*
-Plugins
----------------------------------------------------------------------------------------------------- */
-
-/* Genesis eNews Extended
---------------------------------------------- */
-
 @import 'genesis-enews-extended';
-
-/* Genesis Latest Tweets
---------------------------------------------- */
-
 @import 'genesis-latest-tweets';
-
-/* Gravity Forms
---------------------------------------------- */
-
 @import 'gravity-forms';
-
-/* Jetpack
----------------------------------------------- */
-
 @import 'jetpack';
 
-
-/*
-Site Header
----------------------------------------------------------------------------------------------------- */
-
 @import 'site-header';
-
-/* Title Area
---------------------------------------------- */
-
 @import 'title-area';
 
 /* Full width header, no widgets */
@@ -302,38 +125,11 @@ Site Header
 }
 
 
-/*
-Site Navigation
----------------------------------------------------------------------------------------------------- */
-
 @import 'site-navigation';
-
-/* Site Header Navigation
---------------------------------------------- */
-
 @import 'site-header-navigation';
-
-/* Primary Navigation
---------------------------------------------- */
-
 @import 'nav-primary';
-
-/* Secondary Navigation
---------------------------------------------- */
-
 @import 'nav-secondary';
-
-/* Responsive Menu
---------------------------------------------- */
-
 @import 'responsive-menu';
-
-/*
-Content Area
----------------------------------------------------------------------------------------------------- */
-
-/* Home Page
---------------------------------------------- */
 
 @import 'agency-pro-home';
 
@@ -341,76 +137,18 @@ Content Area
 @import 'home-middle';
 @import 'home-bottom';
 
-/* Entries
---------------------------------------------- */
-
 @import 'entries';
-
-/* After Entry
---------------------------------------------- */
-
 @import 'after-entry';
-
-
-/* Pagination
---------------------------------------------- */
-
 @import 'pagination';
-
-
-/* Comments
---------------------------------------------- */
-
 @import 'comments';
-
-/*
-Sidebars
----------------------------------------------------------------------------------------------------- */
-
 @import 'sidebars';
-
-/*
-Footer Widgets
----------------------------------------------------------------------------------------------------- */
-
 @import 'footer-widgets';
-
-/*
-Site Footer
----------------------------------------------------------------------------------------------------- */
-
 @import 'site-footer';
 
-/*
-Theme Colors
----------------------------------------------------------------------------------------------------- */
-
-/* Agency Pro Blue
---------------------------------------------- */
-
 // @import 'agency-pro-blue';
-
-/* Agency Pro Green
---------------------------------------------- */
-
 // @import 'agency-pro-green';
-
-
-/* Agency Pro Orange
---------------------------------------------- */
-
 // @import 'agency-pro-orange';
-
-
-/* Agency Pro Red
---------------------------------------------- */
-
 // @import 'agency-pro-red';
-
-
-/*
-Media Queries
----------------------------------------------------------------------------------------------------- */
 
 @import 'media-queries';
 
