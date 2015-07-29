@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
  
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -23,7 +24,9 @@ gulp.task('browser-sync', function() {
 // will auto-update browsers
 gulp.task('sass', function () {
     return gulp.src('sass/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./'))
         .pipe(reload({stream:true}));
 });
