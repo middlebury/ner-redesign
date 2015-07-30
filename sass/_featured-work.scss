@@ -15,7 +15,7 @@
 
 .featured-work-media {
     position: relative;
-    z-index: 2;
+    z-index: -2;
 }
 
 .featured-work-content {
@@ -28,15 +28,16 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
+    padding: 10px;
+    background: $black;
+    color: $white;
 
     h3 {
-        background: $black;
-        color: $white;
         font-style: italic;
         font-family: $font-family-serif;
         font-weight: normal;
         font-size: 36px;
-        padding: 10px;
-
+        line-height: 1.2;
+        margin: 0;
     }
 }
