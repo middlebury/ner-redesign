@@ -36,4 +36,11 @@
     &:hover {
         background-color: $beige;
     }
+
+    @include media($screen-sm) {
+        display: block;
+        max-width: 380px;
+        margin: 10px auto;
+        padding: 10px 20px;
+    }
 }
