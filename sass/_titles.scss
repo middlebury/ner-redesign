@@ -1,7 +1,12 @@
 .entry-title {
     color: #333;
     font-size: 36px;
-    line-height: 1;
+    line-height: 1.4;
+    font-weight: 300;
+
+    .single & {
+        margin-bottom: 100px;
+    }
 }
 
 .subtitle {
