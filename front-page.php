@@ -7,7 +7,7 @@
  * @subpackage Customizations
  */
  
-add_action( 'wp_enqueue_scripts', 'agency_enqueue_scripts' );
+// add_action( 'wp_enqueue_scripts', 'agency_enqueue_scripts' );
 /**
  * Enqueue Scripts
  */
