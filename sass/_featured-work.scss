@@ -1,0 +1,42 @@
+.featured-works {
+    @extend .clearfix;
+}
+
+.featured-work {
+    position: relative;
+    
+    @include homeBlock();
+
+    a {
+        display: block;
+        @include innerBorder($white);
+    }
+}
+
+.featured-work-media {
+    position: relative;
+    z-index: 2;
+}
+
+.featured-work-content {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    // width: 100%;
+    // height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+
+    h3 {
+        background: $black;
+        color: $white;
+        font-style: italic;
+        font-family: $font-family-serif;
+        font-weight: normal;
+        font-size: 36px;
+        padding: 10px;
+
+    }
+}
