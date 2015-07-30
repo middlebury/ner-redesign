@@ -1,0 +1,16 @@
+.header-full-width .title-area,
+.header-full-width .site-title {
+    width: 100%;
+    text-align: center;
+}
+
+.header-image .site-description,
+.header-image .site-title a {
+    display: block;
+    text-indent: -9999px;
+}
+
+.header-full-width.header-image .site-title a {
+    background-position: center !important;
+    margin: 0;
+}

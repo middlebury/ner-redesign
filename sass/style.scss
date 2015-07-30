@@ -48,38 +48,6 @@
 
 @import 'site-header';
 @import 'title-area';
-
-/* Full width header, no widgets */
-
-.header-full-width .title-area,
-.header-full-width .site-title {
-    width: 100%;
-    text-align: center;
-}
-
-.header-image .site-description,
-.header-image .site-title a {
-    display: block;
-    text-indent: -9999px;
-}
-
-.header-full-width.header-image .site-title a {
-    background-position: center !important;
-    margin: 0;
-}
-
-/* Logo, hide text */
-
-.header-image .site-header .wrap {
-    padding: 0;
-}
-
-.header-image .site-title a {
-    float: left;
-    min-height: 60px;
-    width: 100%;
-}
-
 /* Widget Area
 --------------------------------------------- */
 
@@ -100,6 +68,7 @@
 }
 
 
+@import 'full-width-header';
 @import 'site-navigation';
 @import 'site-header-navigation';
 @import 'nav-primary';
