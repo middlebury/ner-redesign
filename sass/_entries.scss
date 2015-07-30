@@ -3,6 +3,10 @@
     border-radius: 3px;
     margin-bottom: 40px;
     padding: 40px 40px 24px;
+
+    .single & {
+        padding: 80px 150px 120px;
+    }
 }
 
 .entry-content ol,
