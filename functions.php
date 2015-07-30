@@ -157,6 +157,20 @@ function bg_entry_meta_header($post_info) {
 
 	return $post_info;
 }
+
+/** Force full width layout on all archive pages*/
+add_filter( 'genesis_pre_get_option_site_layout', 'full_width_layout_archives' );
+/**
+* @author Brad Dalton
+* @link http://wpsites.net/web-design/change-layout-genesis/
+*/
+function full_width_layout_archives( $opt ) {
+	if ( is_archive() || is_page() ) {
+	    $opt = 'content-sidebar';
+	    return $opt;
+    } 
+}
+
 //* Modify breadcrumb arguments.
 add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
 function sp_breadcrumb_args( $args ) {
