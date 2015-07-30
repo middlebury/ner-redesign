@@ -143,6 +143,20 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Home Bottom', 'agency' ),
 	'description' => __( 'This is the bottom section of the homepage.', 'agency' ),
 ) );
+//* Customize the entry meta in the entry header
+add_filter( 'genesis_post_info', 'bg_entry_meta_header' );
+function bg_entry_meta_header($post_info) {
+
+	// add date only if on category page
+
+	if ( is_single() ) {
+		$post_info = '';
+	} else {
+		$post_info = '[post_date]';
+	}
+
+	return $post_info;
+}
 //* Modify breadcrumb arguments.
 add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
 function sp_breadcrumb_args( $args ) {
