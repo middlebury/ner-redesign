@@ -1,9 +1,9 @@
 .archive-pagination {
     clear: both;
-    font-family: 'Spinnaker', sans-serif;
-    font-size: 14px;
+    // font-family: 'Spinnaker', sans-serif;
+    font-size: 16px;
     margin: 40px 0;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 .archive-pagination a {
@@ -15,9 +15,9 @@
 }
 
 .archive-pagination li a {
-    background-color: #fff;
-    border-radius: 3px;
-    color: #333;
+    background-color: $black;
+    // border-radius: 3px;
+    color: $white;
     cursor: pointer;
     display: inline-block;
     margin-bottom: 4px;
@@ -26,6 +26,7 @@
 
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-    background-color: #d7c603;
-    color: #fff;
+    background: $beige;
+    color: $black;
+    // border: 2px solid $black;
 }
