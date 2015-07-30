@@ -7,6 +7,14 @@
     .single & {
         margin-bottom: 100px;
     }
+
+    a {
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid $black;
+        }
+    }
+
 }
 
 .subtitle {
