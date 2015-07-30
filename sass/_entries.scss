@@ -18,6 +18,12 @@
 .entry-content p {
     font-size: 19px;
     color: $black;
+
+    .single & {
+        text-indent: 20px;
+        margin-bottom: 0;
+        // line-height: 24px;
+    }
 }
 
 .entry-content ol,
