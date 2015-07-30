@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1180px) {
+@media only screen and (max-width: $screen-xxl) {
 
     .site-inner,
     .wrap {
@@ -42,7 +42,7 @@
 
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: $screen-xl) {
 
     .site-inner,
     .wrap {
@@ -142,7 +142,7 @@
     
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: $screen-lg) {
 
     .five-sixths,
     .four-sixths,
@@ -177,7 +177,7 @@
     
 }
 
-@media only screen and (max-width:782px) {
+@media only screen and (max-width:$screen-md) {
 
     .admin-bar .site-header {
         top: 46px;
@@ -186,7 +186,7 @@
     
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: $screen-sm) {
     
     .header-full-width .site-container,
     .site-container {
@@ -306,7 +306,7 @@
 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: $screen-xs) {
     
     .home-middle .featuredpost img.entry-image {
         position: relative;
