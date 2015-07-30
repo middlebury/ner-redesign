@@ -1,6 +1,3 @@
-@import 'variables';
-@import 'mixins';
-
 /*
     Theme Name: Agency Pro Theme
     Theme URI: http://my.studiopress.com/themes/agency/
@@ -18,6 +15,9 @@
     License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
+@import 'variables';
+@import 'mixins';
+
 @import 'normalize';
 @import 'box-sizing';
 @import 'clearfixes';
@@ -33,20 +33,16 @@
 @import 'primary-sidebar';
 @import 'secondary-sidebar';
 @import 'columns';
-
 @import 'wordpress';
 @import 'genesis';
-
 @import 'titles';
 @import 'widgets';
 @import 'featured-content';
-
 @import 'featured-work';
 @import 'genesis-enews-extended';
 @import 'genesis-latest-tweets';
 @import 'gravity-forms';
 @import 'jetpack';
-
 @import 'site-header';
 @import 'title-area';
 @import 'full-width-header';
@@ -57,13 +53,10 @@
 @import 'nav-primary';
 @import 'nav-secondary';
 @import 'responsive-menu';
-
 @import 'agency-pro-home';
-
 @import 'home-top';
 @import 'home-middle';
 @import 'home-bottom';
-
 @import 'entries';
 @import 'after-entry';
 @import 'pagination';
@@ -71,12 +64,10 @@
 @import 'sidebars';
 @import 'footer-widgets';
 @import 'site-footer';
-
 // @import 'agency-pro-blue';
 // @import 'agency-pro-green';
 // @import 'agency-pro-orange';
 // @import 'agency-pro-red';
-
 @import 'media-queries';
 
 .backstretch {
