@@ -1,4 +1,4 @@
-@mixin innerBorder() {    
+@mixin innerBorder($color: $black) {    
     position: relative;
     z-index: 2;
 
@@ -10,7 +10,7 @@
         top: 5px;
         right: 5px;
         bottom: 5px;
-        border: 2px solid $black;
+        border: 2px solid $color;
         content: '';
         display: block;
         z-index: -1;
