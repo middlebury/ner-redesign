@@ -29,27 +29,6 @@
 @import 'forms';
 @import 'tables';
 @import 'site-containers';
-
-/* Column Widths and Positions
---------------------------------------------- */
-
-/* Wrapping div for .content and .sidebar-primary */
-
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-    width: 920px;
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-    float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-    float: right;
-}
-
 @import 'content';
 @import 'primary-sidebar';
 @import 'secondary-sidebar';
