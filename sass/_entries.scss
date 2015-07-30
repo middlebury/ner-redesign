@@ -52,6 +52,8 @@
 .entry-meta {
     font-family: $font-family-sans-serif;
     color: $black;
+    font-size: 14px;
+
     a {
         border-bottom: 1px solid $black;
 
@@ -60,6 +62,11 @@
             border-color: rgba($black, .2);
         }
     }
+    
+}
+
+.entry-time {
+    font-size: 18px;
 }
 
 .entry-header .entry-meta {
