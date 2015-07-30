@@ -50,9 +50,16 @@
 }
 
 .entry-meta {
-    font-size: 18px;
     font-family: $font-family-sans-serif;
     color: $black;
+    a {
+        border-bottom: 1px solid $black;
+
+        &:focus,
+        &:hover {
+            border-color: rgba($black, .2);
+        }
+    }
 }
 
 .entry-header .entry-meta {
