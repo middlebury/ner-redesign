@@ -12,8 +12,8 @@ load_child_theme_textdomain( 'agency', apply_filters( 'child_theme_textdomain', 
 add_action( 'customize_register', 'agency_customizer' );
 function agency_customizer(){
 
-	require_once( get_stylesheet_directory() . '/lib/customize.php' );
-	
+    require_once( get_stylesheet_directory() . '/lib/customize.php' );
+    
 }
 
 //* Child theme (do not remove)
@@ -31,29 +31,29 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_action( 'wp_enqueue_scripts', 'agency_load_scripts' );
 function agency_load_scripts() {
 
-	wp_enqueue_script( 'agency-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
-	
-	wp_enqueue_style( 'dashicons' );
-	
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Roboto', array(), CHILD_THEME_VERSION );
-	
+    wp_enqueue_script( 'agency-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
+    
+    wp_enqueue_style( 'dashicons' );
+    
+    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Roboto', array(), CHILD_THEME_VERSION );
+    
 }
 
 //* Enqueue Backstretch script and prepare images for loading
 add_action( 'wp_enqueue_scripts', 'agency_enqueue_backstretch_scripts' );
 function agency_enqueue_backstretch_scripts() {
 
-	$image = get_option( 'agency-backstretch-image', sprintf( '%s/images/bg.jpg', get_stylesheet_directory_uri() ) );
-	
-	//* Load scripts only if custom backstretch image is being used
-	if ( ! empty( $image ) ) {
+    $image = get_option( 'agency-backstretch-image', sprintf( '%s/images/bg.jpg', get_stylesheet_directory_uri() ) );
+    
+    //* Load scripts only if custom backstretch image is being used
+    if ( ! empty( $image ) ) {
 
-		wp_enqueue_script( 'agency-pro-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0' );
-		wp_enqueue_script( 'agency-pro-backstretch-set', get_bloginfo( 'stylesheet_directory' ).'/js/backstretch-set.js' , array( 'jquery', 'agency-pro-backstretch' ), '1.0.0' );
+        wp_enqueue_script( 'agency-pro-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0' );
+        wp_enqueue_script( 'agency-pro-backstretch-set', get_bloginfo( 'stylesheet_directory' ).'/js/backstretch-set.js' , array( 'jquery', 'agency-pro-backstretch' ), '1.0.0' );
 
-		wp_localize_script( 'agency-pro-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', $image ) ) );
-	
-	}
+        wp_localize_script( 'agency-pro-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', $image ) ) );
+    
+    }
 
 }
 
@@ -66,19 +66,19 @@ add_theme_support( 'custom-background' );
 
 //* Add support for custom header
 add_theme_support( 'custom-header', array(
-	'header_image'    => '',
-	'header-selector' => '.site-title a',
-	'header-text'     => false,
-	'height'          => 60,
-	'width'           => 300,
+    'header_image'    => '',
+    'header-selector' => '.site-title a',
+    'header-text'     => false,
+    'height'          => 60,
+    'width'           => 300,
 ) );
 
 //* Add support for additional color style options
 add_theme_support( 'genesis-style-selector', array(
-	'agency-pro-blue'   => __( 'Agency Pro Blue', 'agency' ),
-	'agency-pro-green'  => __( 'Agency Pro Green', 'agency' ),
-	'agency-pro-orange' => __( 'Agency Pro Orange', 'agency' ),
-	'agency-pro-red'    => __( 'Agency Pro Red', 'agency' ),
+    'agency-pro-blue'   => __( 'Agency Pro Blue', 'agency' ),
+    'agency-pro-green'  => __( 'Agency Pro Green', 'agency' ),
+    'agency-pro-orange' => __( 'Agency Pro Orange', 'agency' ),
+    'agency-pro-red'    => __( 'Agency Pro Red', 'agency' ),
 ) );
 
 //* Add support for 3-column footer widgets
@@ -106,11 +106,11 @@ add_action( 'genesis_footer', 'genesis_do_subnav', 7 );
 add_filter( 'wp_nav_menu_args', 'agency_secondary_menu_args' );
 function agency_secondary_menu_args( $args ){
 
-	if( 'secondary' != $args['theme_location'] )
-	return $args;
+    if( 'secondary' != $args['theme_location'] )
+    return $args;
 
-	$args['depth'] = 1;
-	return $args;
+    $args['depth'] = 1;
+    return $args;
 
 }
 
@@ -121,75 +121,70 @@ add_action( 'genesis_after_entry', 'genesis_after_entry_widget_area', 5 );
 //* Remove comment form allowed tags
 add_filter( 'comment_form_defaults', 'agency_remove_comment_form_allowed_tags' );
 function agency_remove_comment_form_allowed_tags( $defaults ) {
-	
-	$defaults['comment_notes_after'] = '';
-	return $defaults;
+    
+    $defaults['comment_notes_after'] = '';
+    return $defaults;
 
 }
 
 //* Register widget areas
 genesis_register_sidebar( array(
-	'id'          => 'home-top',
-	'name'        => __( 'Home Top', 'agency' ),
-	'description' => __( 'This is the top section of the homepage.', 'agency' ),
+    'id'          => 'home-top',
+    'name'        => __( 'Home Top', 'agency' ),
+    'description' => __( 'This is the top section of the homepage.', 'agency' ),
 ) );
 genesis_register_sidebar( array(
-	'id'          => 'home-middle',
-	'name'        => __( 'Home Middle', 'agency' ),
-	'description' => __( 'This is the middle section of the homepage.', 'agency' ),
+    'id'          => 'home-middle',
+    'name'        => __( 'Home Middle', 'agency' ),
+    'description' => __( 'This is the middle section of the homepage.', 'agency' ),
 ) );
 genesis_register_sidebar( array(
-	'id'          => 'home-bottom',
-	'name'        => __( 'Home Bottom', 'agency' ),
-	'description' => __( 'This is the bottom section of the homepage.', 'agency' ),
+    'id'          => 'home-bottom',
+    'name'        => __( 'Home Bottom', 'agency' ),
+    'description' => __( 'This is the bottom section of the homepage.', 'agency' ),
 ) );
-//* Customize the entry meta in the entry header
+
+// Customize the entry meta in the entry header
 add_filter( 'genesis_post_info', 'bg_entry_meta_header' );
 function bg_entry_meta_header($post_info) {
 
-	// add date only if on category page
+    // add date only if on category page
+    $post_info = is_single() ? '' : '[post_date]';
 
-	if ( is_single() ) {
-		$post_info = '';
-	} else {
-		$post_info = '[post_date]';
-	}
-
-	return $post_info;
+    return $post_info;
 }
 
-/** Force full width layout on all archive pages*/
+/* Force full width layout on all archive pages*/
 add_filter( 'genesis_pre_get_option_site_layout', 'full_width_layout_archives' );
-/**
-* @author Brad Dalton
-* @link http://wpsites.net/web-design/change-layout-genesis/
-*/
+
 function full_width_layout_archives( $opt ) {
-	if ( is_archive() || is_page() ) {
-	    $opt = 'content-sidebar';
-	    return $opt;
-    } 
+    if ( is_archive() || is_page() ) {
+        $opt = 'content-sidebar';
+        return $opt;
+    }
 }
 
 //* Modify breadcrumb arguments.
 add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
 function sp_breadcrumb_args( $args ) {
-	$args['home'] = 'Home';
-	$args['sep'] = ' &rsaquo; ';
-	$args['list_sep'] = ', '; // Genesis 1.5 and later
-	$args['prefix'] = '<div class="breadcrumb">';
-	$args['suffix'] = '</div>';
-	$args['heirarchial_attachments'] = true; // Genesis 1.5 and later
-	$args['heirarchial_categories'] = true; // Genesis 1.5 and later
-	$args['display'] = true;
-	$args['labels']['prefix'] = '';
-	$args['labels']['author'] = '';
-	$args['labels']['category'] = ''; // Genesis 1.6 and later
-	$args['labels']['tag'] = '';
-	$args['labels']['date'] = '';
-	$args['labels']['search'] = 'Search for ';
-	$args['labels']['tax'] = '';
-	$args['labels']['post_type'] = '';
-	$args['labels']['404'] = 'Not found: '; // Genesis 1.5 and later
-return $args;
+    $args['home'] = 'Home';
+    $args['sep'] = ' &rsaquo; ';
+    $args['list_sep'] = ', '; // Genesis 1.5 and later
+    $args['prefix'] = '<div class="breadcrumb">';
+    $args['suffix'] = '</div>';
+    $args['heirarchial_attachments'] = true; // Genesis 1.5 and later
+    $args['heirarchial_categories'] = true; // Genesis 1.5 and later
+    $args['display'] = true;
+    $args['labels']['prefix'] = '';
+    $args['labels']['author'] = '';
+    $args['labels']['category'] = ''; // Genesis 1.6 and later
+    $args['labels']['tag'] = '';
+    $args['labels']['date'] = '';
+    $args['labels']['search'] = 'Search for ';
+    $args['labels']['tax'] = '';
+    $args['labels']['post_type'] = '';
+    $args['labels']['404'] = 'Not found: '; // Genesis 1.5 and later
+
+    return $args;
 }
+
