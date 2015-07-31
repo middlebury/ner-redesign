@@ -1,9 +1,13 @@
 .footer-widgets {
-    background-color: #fff;
-    border-top: 1px solid #ececec;
-    color: #999;
+    background: $black;
+    // border-top: 1px solid #ececec;
+    color: $white;
     clear: both;
     padding: 60px 0 36px;
+
+    a {
+        color: $white;
+    }
 }
 
 .footer-widgets-1,
@@ -38,5 +42,5 @@
 }
 
 .footer-widgets .search-form input:focus {
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
 }
