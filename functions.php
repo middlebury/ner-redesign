@@ -244,3 +244,10 @@ function ner_after_entry() {
         echo $output;
     }
 }
+
+//* Customize the credits
+add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_filter' );
+function sp_footer_creds_filter( $creds ) {
+    $creds = 'Copyright [footer_copyright] &middot; <a href="https://twitter.com/nerweb" target="_blank">Follow us on Twitter</a> &middot; <a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank">Like us on Facebook</a>';
+    return $creds;
+}
