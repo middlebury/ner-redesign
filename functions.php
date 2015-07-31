@@ -198,3 +198,7 @@ add_filter( 'get_the_content_more_link', 'sp_read_more_link' );
 function sp_read_more_link() {
     return '&hellip;<br><a class="more-link" href="' . get_permalink() . '">Continue Reading</a>';
 }
+
+//* Reposition the breadcrumbs
+remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+add_action( 'genesis_before_content_sidebar_wrap', 'genesis_do_breadcrumbs' );
