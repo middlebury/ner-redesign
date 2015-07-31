@@ -192,3 +192,9 @@ function sp_breadcrumb_args( $args ) {
 remove_filter( 'genesis_entry_header', 'ahjira_subtitle_after_title', 11 );
 // moves subtitle before post title output
 add_filter( 'genesis_entry_header', 'ahjira_subtitle_after_title', 9 );
+
+//* Modify the genesis read more link
+add_filter( 'get_the_content_more_link', 'sp_read_more_link' );
+function sp_read_more_link() {
+    return '&hellip;<br><a class="more-link" href="' . get_permalink() . '">Continue Reading</a>';
+}
