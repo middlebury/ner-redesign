@@ -13,7 +13,7 @@ add_action( 'customize_register', 'agency_customizer' );
 function agency_customizer(){
 
     require_once( get_stylesheet_directory() . '/lib/customize.php' );
-    
+
 }
 
 //* Child theme (do not remove)
@@ -32,11 +32,11 @@ add_action( 'wp_enqueue_scripts', 'agency_load_scripts' );
 function agency_load_scripts() {
 
     wp_enqueue_script( 'agency-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
-    
+
     wp_enqueue_style( 'dashicons' );
-    
+
     wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Roboto:300,400,700', array(), CHILD_THEME_VERSION );
-    
+
 }
 
 //* Enqueue Backstretch script and prepare images for loading
@@ -44,7 +44,7 @@ add_action( 'wp_enqueue_scripts', 'agency_enqueue_backstretch_scripts' );
 function agency_enqueue_backstretch_scripts() {
 
     $image = get_option( 'agency-backstretch-image', sprintf( '%s/images/bg.jpg', get_stylesheet_directory_uri() ) );
-    
+
     //* Load scripts only if custom backstretch image is being used
     if ( ! empty( $image ) ) {
 
@@ -52,7 +52,7 @@ function agency_enqueue_backstretch_scripts() {
         wp_enqueue_script( 'agency-pro-backstretch-set', get_bloginfo( 'stylesheet_directory' ).'/js/backstretch-set.js' , array( 'jquery', 'agency-pro-backstretch' ), '1.0.0' );
 
         wp_localize_script( 'agency-pro-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', $image ) ) );
-    
+
     }
 
 }
@@ -62,7 +62,7 @@ add_image_size( 'home-bottom', 380, 150, TRUE );
 add_image_size( 'home-middle', 380, 380, TRUE );
 
 //* Add support for custom background
-add_theme_support( 'custom-background' ); 
+add_theme_support( 'custom-background' );
 
 //* Add support for custom header
 add_theme_support( 'custom-header', array(
@@ -121,7 +121,7 @@ add_action( 'genesis_after_entry', 'genesis_after_entry_widget_area', 5 );
 //* Remove comment form allowed tags
 add_filter( 'comment_form_defaults', 'agency_remove_comment_form_allowed_tags' );
 function agency_remove_comment_form_allowed_tags( $defaults ) {
-    
+
     $defaults['comment_notes_after'] = '';
     return $defaults;
 
@@ -202,6 +202,7 @@ function sp_read_more_link() {
 //* Reposition the breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_before_content_sidebar_wrap', 'genesis_do_breadcrumbs' );
+
 
 //* Add category link to single posts
 add_action('genesis_after_entry', 'ner_after_entry' );
