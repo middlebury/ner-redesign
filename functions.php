@@ -202,3 +202,44 @@ function sp_read_more_link() {
 //* Reposition the breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_before_content_sidebar_wrap', 'genesis_do_breadcrumbs' );
+
+//* Add category link to single posts
+add_action('genesis_after_entry', 'ner_after_entry' );
+function ner_after_entry() {
+
+    $output = '';
+
+    $category = get_the_category();
+    $category_id = $category[0]->term_id;
+    $category_name = $category[0]->name;
+
+
+    // TODO: replace the image urls with appropriate background patterns
+    switch (strtolower($category_name)) {
+        case 'poetry':
+            $bg_url = '//placehold.it/100x100/c0ffee';
+            break;
+
+        case 'audio':
+            $bg_url = '//placehold.it/100x100/bada55';
+            break;
+
+        case 'uncategorized':
+            $bg_url = '//placehold.it/100x100/FA7A55';
+            break;
+        
+        default:
+            $bg_url = '';
+            break;
+    }
+
+    if ( is_single() ) {
+        $output .= '<a href="' . get_category_link($category_id) . '" class="entry-category-bookmark" style="background-image: url(\'' . $bg_url . '\');">';
+        $output .= '<span>Read more</span>';
+        $output .= '<span class="entry-category-bookmark-name">' . $category_name . '</span>';
+        $output .= '</a>';
+        $output .= '</div>';
+
+        echo $output;
+    }
+}
