@@ -188,3 +188,18 @@ function sp_breadcrumb_args( $args ) {
     return $args;
 }
 
+add_filter('genesis_subtitles_output', 'ner_subtitle_filter' );
+function ner_subtitle_filter($output) {
+    return '';
+}
+
+add_filter('genesis_post_title_output', 'ner_post_title');
+function ner_post_title($title) {
+
+    global $post;
+    $subtitle = esc_html( get_post_meta( $post->ID, '_ahjira_subtitle', TRUE ) );
+    $subtitle_output = '<h2 class="subtitle">' . $subtitle . '</h2>';
+
+    return $subtitle_output . $title;
+}
+
