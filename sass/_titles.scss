@@ -21,7 +21,10 @@
     font-weight: bold;
     font-size: 30px;
     color: $black;
-    margin-bottom: 40px;
+
+    .single & {
+        margin-bottom: 40px;
+    }
 }
 
 .entry-title a {

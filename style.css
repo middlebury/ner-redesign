@@ -671,8 +671,9 @@ img.alignright,
 .subtitle {
   font-weight: bold;
   font-size: 30px;
-  color: #000;
-  margin-bottom: 40px; }
+  color: #000; }
+  .single .subtitle {
+    margin-bottom: 40px; }
 
 .entry-title a {
   color: #333; }
