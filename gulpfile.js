@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var cmq = require('gulp-combine-mq');
 var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
  
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -38,6 +39,7 @@ gulp.task('sass', function () {
 gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
         .pipe(sourcemaps.init())
+        .pipe(uglify())
         .pipe(gulp.dest('./js'))
         .pipe(gulp.dest('./js'))
         .pipe(sourcemaps.write('./maps'))
