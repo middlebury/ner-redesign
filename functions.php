@@ -251,3 +251,33 @@ function sp_footer_creds_filter( $creds ) {
     $creds = 'Copyright [footer_copyright] &middot; <a href="https://twitter.com/nerweb" target="_blank">Follow us on Twitter</a> &middot; <a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank">Like us on Facebook</a>';
     return $creds;
 }
+
+// add notification bar widget
+genesis_register_sidebar( array(
+    'id'          => 'notification-bar',
+    'name'        => __( 'Notification Bar', 'agency' ),
+    'description' => __( 'This is the global bar going across the top of the site.', 'agency' ),
+) );
+
+remove_action( 'genesis_before', 'genesis_header_markup_open', 5);
+add_action( 'genesis_before', 'ner_header_markup_open', 5 );
+
+// Custom build of genesis_header_markup_open
+// only custom part is the widget area
+function ner_header_markup_open() {
+
+    genesis_markup( array(
+        'html5'   => '<header %s>',
+        'xhtml'   => '<div id="header">',
+        'context' => 'site-header',
+    ) );
+
+    // custom insertion of widget area before <wrap>
+    genesis_widget_area( 'notification-bar', array(
+        'before' => '<div id="notification-bar" class="notification-bar"><button class="notification-bar-close-btn">x</button><div class="wrap">',
+        'after'  => '</div></div>',
+    ) );
+
+    genesis_structural_wrap( 'header' );
+
+}
