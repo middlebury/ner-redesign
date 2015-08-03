@@ -11,6 +11,7 @@ gulp.task('browser-sync', function() {
     //watch files
     var files = [
         './style.css',
+        './js/*.js',
         './*.php'
     ];
  
@@ -34,9 +35,17 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
         .pipe(reload({stream:true}));
+gulp.task('js', function() {
+    return gulp.src('./assets/js/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(gulp.dest('./js'))
+        .pipe(gulp.dest('./js'))
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(reload({ stream: true }))
 });
  
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function () {
+gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
     gulp.watch("sass/**/*.scss", ['sass']);
+    gulp.watch("assets/js/**/*.js", ['js']);
 });
