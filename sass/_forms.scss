@@ -59,8 +59,8 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-    background-color: #d7c603;
-    color: #fff;
+    background-color: $gray-light;
+    color: $white;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
