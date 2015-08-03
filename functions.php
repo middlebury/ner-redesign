@@ -205,7 +205,7 @@ add_action( 'genesis_before_content_sidebar_wrap', 'genesis_do_breadcrumbs' );
 
 
 //* Add category link to single posts
-add_action('genesis_after_entry', 'ner_after_entry' );
+add_action('genesis_after_entry', 'ner_after_entry');
 function ner_after_entry() {
 
     $output = '';
