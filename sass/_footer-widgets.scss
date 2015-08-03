@@ -66,4 +66,8 @@
 
 #menu-footer-menu {
     columns: 2;
+
+    @include media($screen-xs) {
+        columns: auto;
+    }
 }
