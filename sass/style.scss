@@ -70,6 +70,14 @@
 // @import 'agency-pro-red';
 @import 'media-queries';
 
+.screen-reader-text {
+    height: 0;
+    width: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+}
+
 .margin-top-1 {
     margin-top: 20px;
 }
