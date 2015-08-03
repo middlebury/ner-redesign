@@ -11,6 +11,8 @@ $white: #fff;
 $gray: #333;
 $gray-light: lighten($gray, 25%);
 $gray-lighter: lighten($gray, 50%);
+$gray-dark: darken($gray, 25%);
+$gray-darker: darken($gray, 50%);
 
 $beige: #FFF1E2;
 
