@@ -40,11 +40,19 @@ a.alignnone img,
 .alignleft {
     float: left;
     text-align: left;
+
+    @include media($screen-sm) {
+        float: none;
+    }
 }
 
 .alignright {
     float: right;
     text-align: right;
+
+    @include media($screen-sm) {
+        float: none;
+    }
 }
 
 a.alignleft,
