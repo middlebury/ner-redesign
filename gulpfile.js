@@ -18,7 +18,8 @@ gulp.task('browser-sync', function() {
     browserSync.init(files, {
     //browsersync with a php server
         proxy: "localhost:8888/NER/",
-        notify: false
+        notify: false,
+        open: false
     });
 });
  
