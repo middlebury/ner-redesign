@@ -50,3 +50,17 @@
 .footer-widgets .search-form input:focus {
     // border: 1px solid #ddd;
 }
+
+.menu-footer-menu-container {
+    font-family: $font-family-sans-serif;
+
+    a {
+        color: $gray-lighter;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}
+}
