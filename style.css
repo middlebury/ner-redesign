@@ -608,10 +608,16 @@ a.alignnone img,
 .alignleft {
   float: left;
   text-align: left; }
+  @media only screen and (max-width: 680px) {
+    .alignleft {
+      float: none; } }
 
 .alignright {
   float: right;
   text-align: right; }
+  @media only screen and (max-width: 680px) {
+    .alignright {
+      float: none; } }
 
 a.alignleft,
 a.alignnone,
@@ -1184,10 +1190,14 @@ img#wpstats {
   color: #000;
   font-size: 17px;
   background-color: #FFF1E2;
-  padding: 30px 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: inline-block;
+  width: 32%;
   position: relative;
   z-index: 2; }
+  .home-top .button + .button {
+    margin-left: 1%; }
   .home-top .button:after {
     position: absolute;
     width: auto;
@@ -1206,9 +1216,11 @@ img#wpstats {
   @media only screen and (max-width: 680px) {
     .home-top .button {
       display: block;
-      max-width: 380px;
       margin: 10px auto;
-      padding: 10px 20px; } }
+      padding: 10px 20px;
+      width: auto; }
+      .home-top .button + .button {
+        margin-left: 0; } }
 
 .home-middle {
   padding: 10% 0 5%; }
@@ -1256,6 +1268,9 @@ img#wpstats {
   padding: 40px 40px 24px; }
   .single .entry {
     padding: 80px 150px 120px; }
+    @media only screen and (max-width: 800px) {
+      .single .entry {
+        padding: 40px 40px 24px; } }
 
 .entry-content ol,
 .entry-content p,
@@ -1517,6 +1532,9 @@ li.comment {
     font-weight: 300;
     font-size: 14px; }
 
+.footer-widgets .widget-area {
+  margin-bottom: 30px; }
+
 .footer-widgets-1,
 .footer-widgets-3 {
   width: 350px; }
@@ -1553,6 +1571,11 @@ li.comment {
   -webkit-columns: 2;
      -moz-columns: 2;
           columns: 2; }
+  @media only screen and (max-width: 480px) {
+    #menu-footer-menu {
+      -webkit-columns: auto;
+         -moz-columns: auto;
+              columns: auto; } }
 
 .site-footer {
   background: #000;
@@ -1574,6 +1597,33 @@ li.comment {
 
 .site-footer p {
   margin-bottom: 0; }
+
+.notification-bar {
+  color: #000;
+  font-family: roboto, helvetica, arial, sans-serif;
+  font-size: 14px;
+  background-color: #FFCC01;
+  padding: 10px; }
+  .notification-bar a {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+    .notification-bar a:focus,
+    .notification-bar a:hover {
+      border-color: #000; }
+
+.notification-bar-close-btn {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #000;
+  border-radius: 5em;
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  cursor: pointer;
+  margin-right: 10px; }
 
 @media only screen and (max-width: 1180px) {
   .site-inner,
