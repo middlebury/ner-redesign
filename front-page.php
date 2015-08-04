@@ -6,21 +6,6 @@
  * @package Agency Pro
  * @subpackage Customizations
  */
- 
-// add_action( 'wp_enqueue_scripts', 'agency_enqueue_scripts' );
-/**
- * Enqueue Scripts
- */
-function agency_enqueue_scripts() {
-
-	if ( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-middle' ) || is_active_sidebar( 'home-bottom' ) ) {
-	
-		wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array( 'jquery' ), '1.4.5-beta', true );
-		wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/jquery.localScroll.min.js', array( 'scrollTo' ), '1.2.8b', true );
-		wp_enqueue_script( 'home', get_stylesheet_directory_uri() . '/js/home.js', array( 'localScroll' ), '', true );
-		
-	}
-}
 
 add_action( 'genesis_meta', 'agency_home_genesis_meta' );
 /**
