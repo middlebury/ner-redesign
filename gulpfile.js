@@ -40,9 +40,9 @@ gulp.task('sass', function () {
 gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(uglify())
         .pipe(gulp.dest('./js'))
         .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
         .pipe(gulp.dest('./js'))
         .pipe(sourcemaps.write('./maps'))
         .pipe(reload({ stream: true }))
