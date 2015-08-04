@@ -8,6 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
  
+var plumber = require('gulp-plumber');
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
     //watch files
@@ -30,6 +31,12 @@ gulp.task('browser-sync', function() {
 // will auto-update browsers
 gulp.task('sass', function() {
     return gulp.src('./assets/sass/*.scss')
+        .pipe(plumber({
+            errorHandler: function(error) {
+                console.log(error.message);
+                this.emit('end');
+            }
+        }))
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions'))
