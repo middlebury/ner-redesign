@@ -40,6 +40,7 @@ gulp.task('sass', function() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer('last 2 versions'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
         // .pipe(cmq())
