@@ -32,9 +32,11 @@ add_action( 'wp_enqueue_scripts', 'agency_load_scripts' );
 function agency_load_scripts() {
 
     wp_enqueue_script( 'agency-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
+    wp_enqueue_script( 'main', get_bloginfo( 'stylesheet_directory' ) . '/js/main.js', array( 'jquery' ), '1.0.0', 1 );
 
     wp_enqueue_style( 'dashicons' );
 
+    // wp_deregister_script( 'jquery-migrate' );
     wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Roboto:300,400,700', array(), CHILD_THEME_VERSION );
 
 }
