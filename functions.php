@@ -274,9 +274,15 @@ function ner_header_markup_open() {
         'context' => 'site-header',
     ) );
 
+    $notifBarClasses = array('notification-bar');
+
+    if ( $_COOKIE['ner_notif_bar_shown'] == 'true' ) {
+        $notifBarClasses[] = 'notification-bar-closed';
+    }
+
     // custom insertion of widget area before <wrap>
     genesis_widget_area( 'notification-bar', array(
-        'before' => '<div id="notification-bar" class="notification-bar"><button class="notification-bar-close-btn">x</button><div class="wrap">',
+        'before' => '<div id="notification-bar" class="' . join(' ', $notifBarClasses) . '"><button class="notification-bar-close-btn">x</button><div class="wrap">',
         'after'  => '</div></div>',
     ) );
 
