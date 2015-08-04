@@ -63,6 +63,6 @@ gulp.task('js', function() {
  
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
-    gulp.watch("assets/js/**/*.js", ['js']);
     gulp.watch('./assets/sass/**/*.scss', ['sass']);
+    gulp.watch('./assets/js/**/*.js', ['js']);
 });
