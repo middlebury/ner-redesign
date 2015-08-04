@@ -1625,6 +1625,9 @@ li.comment {
   cursor: pointer;
   margin-right: 10px; }
 
+.notification-bar-closed {
+  display: none; }
+
 @media only screen and (max-width: 1180px) {
   .site-inner,
   .wrap {
