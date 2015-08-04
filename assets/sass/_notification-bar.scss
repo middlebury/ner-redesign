@@ -29,6 +29,11 @@
     padding: 2px;
     cursor: pointer;
     margin-right: 10px;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(black, .5);
+    }
 }
 
 .notification-bar-closed {
