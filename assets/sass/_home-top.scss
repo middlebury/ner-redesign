@@ -27,8 +27,14 @@
     color: $black;
     font-size: 17px;
     background-color: $beige;
-    padding: 30px 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: inline-block;
+    width: 32%;
+
+    & + .button {
+        margin-left: 1%;
+    }
     
     @include innerBorder();
 
@@ -39,8 +45,13 @@
 
     @include media($screen-sm) {
         display: block;
-        max-width: 380px;
+        // max-width: 380px;
         margin: 10px auto;
         padding: 10px 20px;
+        width: auto;
+
+        & + .button {
+            margin-left: 0;
+        }
     }
 }
