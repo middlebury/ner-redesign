@@ -7,7 +7,7 @@ var cmq = require('gulp-combine-mq');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
- 
+var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -26,7 +26,7 @@ gulp.task('browser-sync', function() {
         open: false
     });
 });
- 
+
 // Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function() {
