@@ -282,7 +282,7 @@ function ner_header_markup_open() {
 
     // custom insertion of widget area before <wrap>
     genesis_widget_area( 'notification-bar', array(
-        'before' => '<div id="notification-bar" class="' . join(' ', $notifBarClasses) . '"><button class="notification-bar-close-btn">x</button><div class="wrap">',
+        'before' => '<div id="notification-bar" class="' . join(' ', $notifBarClasses) . '"><button class="notification-bar-close-btn" aria-label="Close">&times;</button><div class="wrap">',
         'after'  => '</div></div>',
     ) );
 
