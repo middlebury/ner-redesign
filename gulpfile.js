@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
+
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
     //watch files
