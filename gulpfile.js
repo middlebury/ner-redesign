@@ -38,12 +38,16 @@ gulp.task('sass', function() {
             }
         }))
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer('last 2 versions'))
-        // .pipe(cmq())
+        .pipe(sass())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
-        .pipe(reload({stream:true}));
+        // .pipe(cmq())
+        // .pipe(rename({suffix: '.min'}))
+        // .pipe(minifyCss())
+        // .pipe(gulp.dest('./'))
+        .pipe(reload({ stream:true }));
+});
+
 gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
         .pipe(sourcemaps.init())
