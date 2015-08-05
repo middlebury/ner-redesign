@@ -4,6 +4,14 @@
 
     .has-notification-bar & {
         padding-top: 103px;
+
+        @include media($screen-xl) {
+            padding-top: 153px;
+        }
+
+        @include media($screen-sm) {
+            padding-top: 0;
+        }
     }
 }
 
