@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
         $bgContainer.addClass('ner-bg-image');
 
         $bgContainer.css({
-            backgroundImage: "url('" + imgSrc + "')",
+            backgroundImage: 'url("' + imgSrc + '")',
             backgroundSize: 'cover',
             backgroundPosition: '50% 50%',
             position: 'fixed',
