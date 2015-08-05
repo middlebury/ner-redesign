@@ -1,12 +1,12 @@
 jQuery(document).ready(function($) {
 
     $('.notification-bar-close-btn').on('click', function(event) {
-        var $this = $(this);
+
 
         var tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
 
-        $this.parent('.notification-bar').hide();
+        $(this).parent('.notification-bar').hide();
 
         $('body').removeClass('has-notification-bar');
 
