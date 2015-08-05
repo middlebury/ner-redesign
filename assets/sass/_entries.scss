@@ -3,7 +3,7 @@
     margin-bottom: 40px;
     padding: 40px 40px 24px;
 
-    .single & {
+    .single.full-width-content & {
         padding: 80px 150px 120px;
 
         @include media($screen-lg) {
@@ -26,7 +26,10 @@
     .single & {
         text-indent: 20px;
         margin-bottom: 0;
-        // line-height: 24px;
+
+        &:first-child {
+            text-indent: 0;
+        }
     }
 }
 
