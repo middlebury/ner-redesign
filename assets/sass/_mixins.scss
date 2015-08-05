@@ -1,0 +1,58 @@
+@mixin innerBorder($color: $black) {    
+    position: relative;
+    z-index: 2;
+
+    &:after {
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 5px;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 2px solid $color;
+        content: '';
+        display: block;
+        z-index: -1;
+    }
+}
+
+@mixin media($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+
+@mixin homeBlock() {
+    float: left;
+    width: 32%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+
+    &:nth-of-type(3n+1) {
+        margin-left: 0;
+    }
+
+    @include media($screen-xl) {
+        width: 48%;
+
+        &:nth-of-type(3n+1) {
+            margin-left: 2%;
+        }
+
+        &:nth-of-type(odd) {
+            margin-left: 0;
+        }
+    }
+
+    @include media($screen-sm) {
+        width: 100%;
+        margin-left: 0;
+
+        &:nth-of-type(3n+1) {
+            margin-left: 0;
+        }
+    }
+}
+

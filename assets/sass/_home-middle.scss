@@ -1,0 +1,33 @@
+.home-middle {
+    padding: 10% 0 5%;
+}
+
+.home-middle .featuredpost img.entry-image {
+    left: 0;
+    position: absolute;
+}
+
+.home-middle .featuredpost img:hover {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+      filter: alpha(opacity=10);
+      -moz-opacity: 0.1;
+      -khtml-opacity: 0.1;
+      opacity: 0.1;
+}
+
+.home-middle .featured-content.featuredpost {
+    background: none;
+}
+
+.home-middle .featuredpost .entry {
+    background-color: #333;
+    color: #fff;
+}
+
+.home-middle .featuredpost .entry {
+    min-height: 380px;
+}
+
+.home-middle .featuredpost .entry-title a {
+    color: #fff;
+}

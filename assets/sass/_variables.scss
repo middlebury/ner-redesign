@@ -1,0 +1,21 @@
+$screen-xs: 480px;
+$screen-sm: 680px;
+$screen-md: 782px;
+$screen-lg: 800px;
+$screen-xl: 1023px;
+$screen-xxl: 1180px;
+
+$black: #000;
+$white: #fff;
+
+$gray: #333;
+$gray-light: lighten($gray, 25%);
+$gray-lighter: lighten($gray, 50%);
+$gray-dark: darken($gray, 25%);
+$gray-darker: darken($gray, 50%);
+
+$yellow: #FFCC01;
+$beige: #FFF1E2;
+
+$font-family-serif: ('eb garamond', georgia, 'times new roman', serif);
+$font-family-sans-serif: (roboto, helvetica, arial, sans-serif);

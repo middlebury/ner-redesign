@@ -1,0 +1,13 @@
+.widget {
+    word-wrap: break-word;
+}
+
+.widget li {
+    list-style-type: none;
+    margin-bottom: 6px;
+}
+
+.widget li li {
+    margin: 0;
+    padding: 0 0 0 20px;
+}

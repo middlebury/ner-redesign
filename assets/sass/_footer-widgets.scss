@@ -1,0 +1,77 @@
+.footer-widgets {
+    background: $black;
+    // border-top: 1px solid #ececec;
+    font-family: $font-family-sans-serif;
+    color: $white;
+    clear: both;
+    padding: 60px 0 36px;
+
+    a {
+        color: $white;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+
+.footer-widgets .widget-area {
+    margin-bottom: 30px;
+}
+
+.footer-widgets-1,
+.footer-widgets-3 {
+    width: 350px;
+}
+
+.footer-widgets-2 {
+    width: 360px;
+}
+
+.footer-widgets-1 {
+    margin-right: 40px;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+    float: left;
+}
+
+.footer-widgets-3 {
+    float: right;
+}
+
+.footer-widgets .widget {
+    margin-bottom: 24px;
+}
+
+.footer-widgets li {
+    list-style-type: none;
+    margin-bottom: 6px;
+}
+
+.footer-widgets .search-form input:focus {
+    // border: 1px solid #ddd;
+}
+
+.menu-footer-menu-container {
+    font-family: $font-family-sans-serif;
+
+    a {
+        color: $gray-lighter;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}
+
+#menu-footer-menu {
+    columns: 2;
+
+    @include media($screen-xs) {
+        columns: auto;
+    }
+}

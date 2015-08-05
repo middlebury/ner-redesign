@@ -1,0 +1,15 @@
+
+.responsive-menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.responsive-menu-icon::before {
+    color: #fff;
+    content: "\f333";
+    display: block;
+    font: normal 20px/1 'dashicons';
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}

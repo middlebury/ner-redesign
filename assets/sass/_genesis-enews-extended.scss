@@ -1,0 +1,23 @@
+.enews-widget {
+    color: #999;
+}
+
+.enews-widget input {
+    margin-bottom: 16px;
+}
+
+.enews-widget input:focus {
+    border: 1px solid #ddd;
+}
+
+.enews-widget input[type="submit"] {
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+}
+
+.enews-widget input:hover[type="submit"] {
+    background-color: #d7c603;
+    color: #fff;
+}

@@ -1,0 +1,82 @@
+/*!
+    Theme Name: NER 2015
+    Description: 2015 redesign of New England Review
+    Author: Middlebury College Digital Services
+    Author URI: http://www.middlebury.edu/
+    Version: 1.0.0
+ 
+    Template: genesis
+    Template Version: 2.1
+*/
+
+@import 'variables';
+@import 'mixins';
+
+@import 'normalize';
+@import 'box-sizing';
+@import 'clearfixes';
+
+@import 'typography';
+@import 'headings';
+@import 'objects';
+@import 'gallery';
+@import 'forms';
+@import 'tables';
+@import 'site-containers';
+@import 'content';
+@import 'primary-sidebar';
+@import 'secondary-sidebar';
+@import 'columns';
+@import 'wordpress';
+@import 'genesis';
+@import 'titles';
+@import 'widgets';
+@import 'featured-content';
+@import 'featured-work';
+@import 'genesis-enews-extended';
+@import 'genesis-latest-tweets';
+@import 'gravity-forms';
+@import 'jetpack';
+@import 'site-header';
+@import 'title-area';
+@import 'full-width-header';
+@import 'logo';
+@import 'header-widget-area';
+@import 'site-navigation';
+@import 'site-header-navigation';
+@import 'nav-primary';
+@import 'nav-secondary';
+@import 'responsive-menu';
+@import 'agency-pro-home';
+@import 'home-top';
+@import 'home-middle';
+@import 'home-bottom';
+@import 'entries';
+@import 'after-entry';
+@import 'pagination';
+@import 'comments';
+@import 'sidebars';
+@import 'footer-widgets';
+@import 'site-footer';
+@import 'notification-bar';
+// @import 'agency-pro-blue';
+// @import 'agency-pro-green';
+// @import 'agency-pro-orange';
+// @import 'agency-pro-red';
+@import 'media-queries';
+
+.screen-reader-text {
+    height: 0;
+    width: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+}
+
+.margin-top-1 {
+    margin-top: 20px;
+}
+
+.backstretch {
+    opacity: .6;
+}

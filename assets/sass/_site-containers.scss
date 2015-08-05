@@ -1,0 +1,31 @@
+.header-full-width .site-container,
+.site-container {
+    padding-top: 61px;
+
+    .has-notification-bar & {
+        padding-top: 103px;
+
+        @include media($screen-xl) {
+            padding-top: 153px;
+        }
+
+        @include media($screen-sm) {
+            padding-top: 0;
+        }
+    }
+}
+
+.site-inner,
+.wrap {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.site-inner {
+    clear: both;
+    padding: 25px 0;
+}
+
+.agency-pro-home .site-inner {
+    padding: 0;
+}

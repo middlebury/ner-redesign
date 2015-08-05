@@ -1,0 +1,122 @@
+.entry {
+    background-color: $beige;
+    margin-bottom: 40px;
+    padding: 40px 40px 24px;
+
+    .single & {
+        padding: 80px 150px 120px;
+
+        @include media($screen-lg) {
+            padding: 40px 40px 24px;
+        }
+    }
+}
+
+.entry-content ol,
+.entry-content p,
+.entry-content ul,
+.quote-caption {
+    margin-bottom: 26px;
+}
+
+.entry-content p {
+    font-size: 19px;
+    color: $black;
+
+    .single & {
+        text-indent: 20px;
+        margin-bottom: 0;
+        // line-height: 24px;
+    }
+}
+
+.entry-content ol,
+.entry-content ul {
+    margin-left: 40px;
+}
+
+.entry-content ol li {
+    list-style-type: decimal;
+}
+
+.entry-content ul li {
+    list-style-type: square;
+}
+
+.entry-content ol ol,
+.entry-content ul ul,
+.entry-content .wp-caption p {
+    margin-bottom: 0;
+}
+
+.entry-content .search-form {
+    width: 50%;
+}
+
+.entry-meta {
+    font-family: $font-family-sans-serif;
+    color: $black;
+    font-size: 14px;
+
+    a {
+        border-bottom: 1px solid $black;
+
+        &:focus,
+        &:hover {
+            border-color: rgba($black, .2);
+        }
+    }
+    
+}
+
+.entry-time {
+    font-size: 18px;
+}
+
+.entry-tags {
+    margin-top: 20px;
+}
+
+.entry-header .entry-meta {
+    margin-bottom: 20px;
+}
+
+.entry-footer .entry-meta {
+    border-top: 2px solid #f5f5f5;
+    margin: 0 -40px;
+    padding: 32px 40px 8px;
+}
+
+.entry-comments-link::before {
+    content: "\2B";
+    font-weight: 700;
+    margin: 0 4px 0 6px;
+}
+
+.entry-categories,
+.entry-tags {
+    display: block;
+}
+
+.entry-category-bookmark {
+    color: $white;
+    font-family: $font-family-sans-serif;
+    text-align: center;
+    display: inline-block;
+    background: $black;
+    margin-top: -40px;
+    padding: 30px 50px;
+    @include innerBorder($white);
+
+    &:focus,
+    &:hover {
+        color: darken($white, .5);
+    }
+}
+
+.entry-category-bookmark-name {
+    font-size: 24px;
+    font-family: $font-family-serif;
+    font-style: italic;
+    display: block;
+}

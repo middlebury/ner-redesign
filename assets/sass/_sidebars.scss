@@ -1,0 +1,44 @@
+.sidebar {
+    color: $white;
+    font-family: $font-family-sans-serif;
+}
+
+.sidebar p:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar li {
+    list-style-type: none;
+    margin-bottom: 6px;
+}
+
+.sidebar ul > li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar .widget {
+    background-color: $black;
+    // border-radius: 3px;
+    margin-bottom: 40px;
+    padding: 28px 20px;
+    @include innerBorder($white);
+}
+
+.sidebar .widget .widget-title {
+    color: $beige;
+    border-bottom: 1px solid $beige;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.sidebar .enews-widget {
+    background-color: #333;
+}
+
+.sidebar .enews-widget .widget-title {
+    color: #fff;
+}

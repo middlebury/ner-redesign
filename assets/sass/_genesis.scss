@@ -1,0 +1,41 @@
+.breadcrumb {
+    color: #fff;
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .05em;
+}
+
+.archive-description,
+.author-box {
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+
+.archive-description {
+    padding: 40px 40px 24px;
+}
+
+.author-box {
+    padding: 40px;
+}
+
+.author-box-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.author-box p {
+    margin-bottom: 0;
+}
+
+.author-box .avatar {
+    margin-right: 24px;
+}
