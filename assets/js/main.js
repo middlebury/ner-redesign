@@ -25,7 +25,6 @@ jQuery(document).ready(function($) {
         $bgContainer.css({
             backgroundImage: "url('" + imgSrc + "')",
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
             backgroundPosition: '0 0',
             position: 'fixed',
             width: '100%',
