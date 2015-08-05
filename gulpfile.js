@@ -49,19 +49,12 @@ gulp.task('sass', function() {
         .pipe(gutil.env.type === 'production' ? minifyCss() : gutil.noop())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
-        // .pipe(cmq())
-        // .pipe(rename({suffix: '.min'}))
-        // .pipe(minifyCss())
-        // .pipe(gulp.dest('./'))
         .pipe(reload({ stream: true }));
 });
 
 gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(gulp.dest('./js'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
         .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
         .pipe(gulp.dest('./js'))
         .pipe(sourcemaps.write('./maps'))
