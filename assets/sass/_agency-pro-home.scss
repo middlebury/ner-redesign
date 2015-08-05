@@ -76,7 +76,7 @@
 }
 
 .agency-pro-home .content .featured-content .entry {
-    border-radius: 0;
+    // border-radius: 0;
     margin: 0;
     padding: 0;
     position: relative;
@@ -105,7 +105,7 @@
 
 .agency-pro-home .content .featuredpost .entry {
     background: $black;
-    @include homeBlock();
+    margin-bottom: 20px;
 
 }
 
