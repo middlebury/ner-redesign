@@ -10,6 +10,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
+var size = require('gulp-size');
 var del = require('del');
 
 gulp.task('browser-sync', function() {
@@ -48,6 +49,7 @@ gulp.task('sass', function() {
         .pipe(gutil.env.type === 'production' ? cmq() : gutil.noop())
         .pipe(gutil.env.type === 'production' ? minifyCss() : gutil.noop())
         .pipe(sourcemaps.write('./'))
+        .pipe(size({ showFiles: true }))
         .pipe(gulp.dest('./'))
         .pipe(reload({ stream: true }));
 });
@@ -57,6 +59,7 @@ gulp.task('js', function() {
         .pipe(sourcemaps.init())
         .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
         .pipe(sourcemaps.write('./'))
+        .pipe(size({ showFiles: true }))
         .pipe(gulp.dest('./js'))
         .pipe(reload({ stream: true }))
 });
