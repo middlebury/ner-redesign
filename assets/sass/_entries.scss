@@ -1,15 +1,7 @@
 .entry {
     background-color: $beige;
-    margin-bottom: 40px;
-    padding: 40px 40px 24px;
-
-    .single.full-width-content & {
-        padding: 80px 150px 120px;
-
-        @include media($screen-lg) {
-            padding: 40px 40px 24px;
-        }
-    }
+    padding: 40px 8% 24px;
+    margin-bottom: 20px;
 }
 
 .entry-content ol,
@@ -106,7 +98,8 @@
     text-align: center;
     display: inline-block;
     background: $black;
-    margin-top: -40px;
+    margin-left: 8%;
+    margin-top: -20px;
     padding: 30px 50px;
     @include innerBorder($white);
 
