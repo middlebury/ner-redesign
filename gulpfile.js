@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var sass = require('gulp-sass');
@@ -50,6 +51,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions'))
+        .pipe(gutil.env.type === 'production' ? minifyCss() : gutil.noop())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
         // .pipe(cmq())
@@ -65,6 +67,7 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
+        .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
         .pipe(gulp.dest('./js'))
         .pipe(sourcemaps.write('./maps'))
         .pipe(reload({ stream: true }))
