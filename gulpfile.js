@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
+var del = require('del');
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -26,6 +27,14 @@ gulp.task('browser-sync', function() {
         notify: false,
         open: false
     });
+});
+
+gulp.task('clean', function(cb) {
+    del([
+        './js/*',
+        './style.css',
+        './style.css.map'
+    ], cb);
 });
 
 // Sass task, will run when any SCSS files change & BrowserSync
@@ -62,7 +71,7 @@ gulp.task('js', function() {
 });
  
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('default', ['clean', 'sass', 'js', 'browser-sync'], function() {
     gulp.watch('./assets/sass/**/*.scss', ['sass']);
     gulp.watch('./assets/js/**/*.js', ['js']);
 });
