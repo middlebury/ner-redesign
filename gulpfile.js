@@ -56,8 +56,8 @@ gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./js'))
-        .pipe(sourcemaps.write('./maps'))
         .pipe(reload({ stream: true }))
 });
  
