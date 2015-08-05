@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    var imgSrc = BackStretchImg.src;
+    var imgSrc = (typeof BackStretchImg !== 'undefined') ? BackStretchImg.src : '';
 
     if(imgSrc) {
         var $bgContainer = $('<div></div>');
