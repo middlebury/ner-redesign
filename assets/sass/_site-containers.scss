@@ -1,6 +1,10 @@
 .header-full-width .site-container,
 .site-container {
     padding-top: 61px;
+
+    .has-notification-bar & {
+        padding-top: 103px;
+    }
 }
 
 .site-inner,
