@@ -12,18 +12,14 @@ var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 var del = require('del');
 
-// browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
-    //watch files
     var files = [
         './style.css',
         './js/*.js',
         './*.php'
     ];
  
-    //initialize browsersync
     browserSync.init(files, {
-    //browsersync with a php server
         proxy: 'localhost:8888/NER/',
         notify: false,
         open: false
@@ -38,8 +34,6 @@ gulp.task('clean', function(cb) {
     ], cb);
 });
 
-// Sass task, will run when any SCSS files change & BrowserSync
-// will auto-update browsers
 gulp.task('sass', function() {
     return gulp.src('./assets/sass/**/*.scss')
         .pipe(plumber({
@@ -73,7 +67,6 @@ gulp.task('js', function() {
         .pipe(reload({ stream: true }))
 });
  
-// Default task to be run with `gulp`
 gulp.task('default', ['clean', 'sass', 'js', 'browser-sync'], function() {
     gulp.watch('./assets/sass/**/*.scss', ['sass']);
     gulp.watch('./assets/js/**/*.js', ['js']);
