@@ -50,10 +50,7 @@ function agency_enqueue_backstretch_scripts() {
     //* Load scripts only if custom backstretch image is being used
     if ( ! empty( $image ) ) {
 
-        wp_enqueue_script( 'agency-pro-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0' );
-        wp_enqueue_script( 'agency-pro-backstretch-set', get_bloginfo( 'stylesheet_directory' ).'/js/backstretch-set.js' , array( 'jquery', 'agency-pro-backstretch' ), '1.0.0' );
-
-        wp_localize_script( 'agency-pro-backstretch-set', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', $image ) ) );
+        wp_localize_script( 'main', 'BackStretchImg', array( 'src' => str_replace( 'http:', '', $image ) ) );
 
     }
 
