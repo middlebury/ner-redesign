@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
         var tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
 
-        $this.parent('.notification-bar').slideUp(200);
+        $this.parent('.notification-bar').hide();
 
         document.cookie='ner_notif_bar_shown=true; expires=' + new Date(tomorrow) + '; path=/';
     });
