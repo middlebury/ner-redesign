@@ -2,6 +2,7 @@ jQuery(document).ready(function($) {
 
     $('.notification-bar-close-btn').on('click', function(event) {
 
+        event.preventDefault();
 
         var tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
