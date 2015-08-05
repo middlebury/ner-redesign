@@ -289,3 +289,17 @@ function ner_header_markup_open() {
     genesis_structural_wrap( 'header' );
 
 }
+
+
+// add notfication bar class if there's no cookie i.e. the notification bar is visible
+
+if ( ! $_COOKIE['ner_notif_bar_shown'] && is_active_sidebar( 'notification-bar' ) ) {
+    add_filter( 'body_class', 'ner_notification_bar_body_class' );
+}
+
+function ner_notification_bar_body_class( $classes ) {
+    $classes[] = 'has-notification-bar';
+    return $classes;
+}
+
+
