@@ -8,6 +8,8 @@ jQuery(document).ready(function($) {
 
         $this.parent('.notification-bar').hide();
 
+        $('body').removeClass('has-notification-bar');
+
         document.cookie='ner_notif_bar_shown=true; expires=' + new Date(tomorrow) + '; path=/';
     });
 
