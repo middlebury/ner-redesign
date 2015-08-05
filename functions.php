@@ -219,15 +219,15 @@ function ner_after_entry() {
         // TODO: replace the image urls with appropriate background patterns
         switch (strtolower($category_name)) {
             case 'poetry':
-                $bg_url = '//placehold.it/100x100/c0ffee';
+                $bg_url = '';
                 break;
 
             case 'audio':
-                $bg_url = '//placehold.it/100x100/bada55';
+                $bg_url = '';
                 break;
 
             case 'uncategorized':
-                $bg_url = '//placehold.it/100x100/FA7A55';
+                $bg_url = '';
                 break;
             
             default:
