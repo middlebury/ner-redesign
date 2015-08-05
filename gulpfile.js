@@ -52,7 +52,7 @@ gulp.task('sass', function() {
         // .pipe(rename({suffix: '.min'}))
         // .pipe(minifyCss())
         // .pipe(gulp.dest('./'))
-        .pipe(reload({ stream:true }));
+        .pipe(reload({ stream: true }));
 });
 
 gulp.task('js', function() {
