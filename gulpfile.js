@@ -45,6 +45,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions'))
+        .pipe(gutil.env.type === 'production' ? cmq() : gutil.noop())
         .pipe(gutil.env.type === 'production' ? minifyCss() : gutil.noop())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
