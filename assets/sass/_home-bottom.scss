@@ -1,4 +1,7 @@
 .home-bottom {
     padding: 5% 0 10%;
 
+    .entry {
+        @include innerBorder();
+    }
 }
