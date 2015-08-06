@@ -1564,16 +1564,17 @@ li.comment {
   text-align: center;
   text-transform: uppercase; }
 
-.site-footer a {
-  color: #b3b3b3;
-  border-bottom: 1px solid #737373; }
-
-.site-footer a:hover {
-  color: #b3b3b3;
-  border-color: #b3b3b3; }
-
 .site-footer p {
   margin-bottom: 0; }
+
+.site-footer-social-link svg {
+  fill: #b3b3b3;
+  -webkit-transition: fill 0.2s;
+          transition: fill 0.2s; }
+
+.site-footer-social-link:focus svg,
+.site-footer-social-link:hover svg {
+  fill: #fff; }
 
 .notification-bar {
   color: #000;
@@ -1806,8 +1807,5 @@ li.comment {
 
 .margin-top-1 {
   margin-top: 20px; }
-
-.backstretch {
-  opacity: .6; }
 
 /*# sourceMappingURL=style.css.map */
