@@ -248,8 +248,21 @@ function ner_after_entry() {
 //* Customize the credits
 add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_filter' );
 function sp_footer_creds_filter( $creds ) {
-    $creds = 'Copyright [footer_copyright] &middot; <a href="https://twitter.com/nerweb" target="_blank">Follow us on Twitter</a> &middot; <a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank">Like us on Facebook</a>';
-    return $creds;
+
+    $fbIconPath = get_bloginfo( 'stylesheet_directory' ) . '/images/facebook.svg';
+    $twitterIconPath = get_bloginfo( 'stylesheet_directory' ) . '/images/twitter.svg';
+
+    // not sure about this since you could add js within the .svg files
+    $fbSvg = file_get_contents($fbIconPath);
+    $twitterSvg = file_get_contents($twitterIconPath);
+
+    $creds = array('Copyright [footer_copyright]');
+
+    $creds[] = '<a href="https://twitter.com/nerweb" target="_blank" class="site-footer-social-link">' . $fbSvg . '</a>';
+
+    $creds[] = '<a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank" class="site-footer-social-link">' . $twitterSvg . '</a>';
+
+    return join(' &middot; ', $creds);
 }
 
 // add notification bar widget
