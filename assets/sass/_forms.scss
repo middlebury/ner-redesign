@@ -59,6 +59,17 @@ input[type="submit"],
     width: auto;
     appearance: none;
     font-size: 14px;
+
+    .widget & {
+        background-color: $yellow;
+        color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: $yellow-dark;
+            color: $black;
+        }
+    }
 }
 
 .button,
