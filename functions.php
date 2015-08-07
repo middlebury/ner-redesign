@@ -331,3 +331,12 @@ function ner_footer_widget() {
 // move featured image on entries (posts on category/archive pages)
 remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
+
+// add featured images to single post pages
+add_action( 'genesis_entry_header', 'featured_post_image', 8 );
+function featured_post_image() {
+    if ( is_single() ) { 
+        the_post_thumbnail('medium');
+    }
+
+}
