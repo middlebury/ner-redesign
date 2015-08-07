@@ -217,11 +217,11 @@ a {
     p a:hover,
     p a:focus {
       border-color: #000; }
-  .widget a {
+  .widget_text a {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
-    .widget a:hover,
-    .widget a:focus {
+    .widget_text a:hover,
+    .widget_text a:focus {
       color: #fff;
       border-color: white; }
 
