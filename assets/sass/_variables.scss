@@ -15,6 +15,9 @@ $gray-dark: darken($gray, 25%);
 $gray-darker: darken($gray, 50%);
 
 $yellow: #FFCC01;
+$yellow-light: lighten($yellow, 5%);
+$yellow-dark: darken($yellow, 5%);
+
 $beige: #FFF1E2;
 
 $font-family-serif: ('eb garamond', georgia, 'times new roman', serif);
