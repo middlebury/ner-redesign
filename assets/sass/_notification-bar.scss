@@ -8,10 +8,12 @@
     a {
         text-transform: uppercase;
         border-bottom: 1px solid rgba($black, .5);
+        color: $black;
 
         &:focus,
         &:hover {
             border-color: $black;
+            color: $black;
         }
     }
 }
