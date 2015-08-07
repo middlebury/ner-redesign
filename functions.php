@@ -272,6 +272,12 @@ genesis_register_sidebar( array(
     'description' => __( 'This is the global bar going across the top of the site.', 'agency' ),
 ) );
 
+genesis_register_sidebar( array(
+    'id'          => 'footer-4',
+    'name'        => __( 'Footer 4', 'agency' ),
+    'description' => __( 'Area below footer widgets 1, 2, and 3', 'agency' ),
+) );
+
 remove_action( 'genesis_before', 'genesis_header_markup_open', 5);
 add_action( 'genesis_before', 'ner_header_markup_open', 5 );
 
@@ -313,4 +319,11 @@ function ner_notification_bar_body_class( $classes ) {
     return $classes;
 }
 
+add_action( 'genesis_footer', 'ner_footer_widget', 9 );
 
+function ner_footer_widget() {
+    genesis_widget_area( 'footer-4', array(
+        'before' => '<div class="footer-widgets-4 widget-area"><div class="wrap">',
+        'after'  => '</div></div>',
+    ) );
+}
