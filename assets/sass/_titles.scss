@@ -1,7 +1,4 @@
 .entry-title {
-    color: #333;
-    font-size: 36px;
-    line-height: 1.4;
     font-weight: 300;
 
     .single & {
@@ -18,10 +15,6 @@
 }
 
 .subtitle {
-    font-weight: bold;
-    font-size: 30px;
-    color: $black;
-
     .single & {
         margin-bottom: 40px;
     }
