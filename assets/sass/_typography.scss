@@ -20,13 +20,13 @@ textarea:focus,
 }
 
 ::-moz-selection {
-    background-color: #333;
-    color: #fff;
+    background-color: $gray-dark;
+    color: $white;
 }
 
 ::selection {
-    background-color: #333;
-    color: #fff;
+    background-color: $gray-dark;
+    color: $white;
 }
 
 a {
