@@ -24,16 +24,6 @@
     @include innerBorder($white);
 }
 
-.sidebar .widget .widget-title {
-    color: $beige;
-    border-bottom: 1px solid $beige;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 20px;
-
-}
 
 .sidebar .enews-widget {
     background-color: #333;
