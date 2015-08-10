@@ -46,7 +46,7 @@ a {
         }
     }
 
-    .widget_text & {
+    .widget-area:not(.footer-widgets-4) .widget_text & {
         color: $white;
         border-bottom: 1px solid rgba($white, .5);
 
