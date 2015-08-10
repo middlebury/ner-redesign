@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "NER2015",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "browser-sync": "^2.8.1",
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.4"
-  },
-  "devDependencies": {
+    "gulp-sass": "^2.0.4",
     "browser-sync": "^2.8.1",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
