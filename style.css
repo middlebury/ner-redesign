@@ -1269,6 +1269,9 @@ img#wpstats {
 .entry-tags {
   display: block; }
 
+.single .entry-header .wp-post-image {
+  margin-bottom: 20px; }
+
 .entry-category-bookmark {
   color: #fff;
   font-family: roboto, helvetica, arial, sans-serif;
