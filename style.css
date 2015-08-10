@@ -804,7 +804,8 @@ img.alignright,
       border: 2px solid #fff;
       content: '';
       display: block;
-      z-index: -1; }
+      z-index: -1;
+      box-shadow: 0 0 0 5px black; }
 
 .featured-work-media {
   position: relative;
@@ -1294,7 +1295,8 @@ img#wpstats {
     border: 2px solid #fff;
     content: '';
     display: block;
-    z-index: -1; }
+    z-index: -1;
+    box-shadow: 0 0 0 5px black; }
   .entry-category-bookmark:focus,
   .entry-category-bookmark:hover {
     color: #fefefe; }
@@ -1457,7 +1459,8 @@ li.comment {
     border: 2px solid #fff;
     content: '';
     display: block;
-    z-index: -1; }
+    z-index: -1;
+    box-shadow: 0 0 0 5px black; }
 
 .footer-widgets {
   background: #000;
