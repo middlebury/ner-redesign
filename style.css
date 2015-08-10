@@ -213,10 +213,10 @@ a {
   a:focus {
     outline: 0; }
   p a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+    border-bottom: 1px solid #000; }
     p a:hover,
     p a:focus {
-      border-color: #000; }
+      border-color: rgba(0, 0, 0, 0.25); }
   .footer-widgets .widget_text a,
   .sidebar .widget_text a {
     color: #fff;
