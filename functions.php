@@ -219,15 +219,15 @@ function ner_after_entry() {
         // TODO: replace the image urls with appropriate background patterns
         switch (strtolower($category_name)) {
             case 'poetry':
-                $bg_url = '';
+                $bg_url = 'http://localhost:8888/NER/wp-content/uploads/2015/08/NER_1.png';
                 break;
 
             case 'audio':
-                $bg_url = '';
+                $bg_url = 'http://localhost:8888/NER/wp-content/uploads/2015/08/NER_2.png';
                 break;
 
             case 'uncategorized':
-                $bg_url = '';
+                $bg_url = 'http://localhost:8888/NER/wp-content/uploads/2015/08/NER_3.png';
                 break;
             
             default:
