@@ -1126,7 +1126,8 @@ img#wpstats {
     z-index: -1; }
   .home-top .button:focus,
   .home-top .button:hover {
-    background-color: #FFF1E2; }
+    background-color: #ffe5c8;
+    text-decoration: underline; }
   @media only screen and (max-width: 680px) {
     .home-top .button {
       display: block;
