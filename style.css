@@ -217,11 +217,14 @@ a {
     p a:hover,
     p a:focus {
       border-color: #000; }
-  .widget-area:not(.footer-widgets-4) .widget_text a {
+  .footer-widgets .widget_text a,
+  .sidebar .widget_text a {
     color: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
-    .widget-area:not(.footer-widgets-4) .widget_text a:hover,
-    .widget-area:not(.footer-widgets-4) .widget_text a:focus {
+    .footer-widgets .widget_text a:hover,
+    .footer-widgets .widget_text a:focus,
+    .sidebar .widget_text a:hover,
+    .sidebar .widget_text a:focus {
       color: #fff;
       border-color: white; }
 
