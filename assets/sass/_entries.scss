@@ -115,6 +115,11 @@
     &:hover {
         color: darken($white, .5);
     }
+
+    span {
+        background-color: $black;
+        padding: 5px;
+    }
 }
 
 .entry-category-bookmark-name {
