@@ -123,6 +123,21 @@
     }
 }
 
+// TODO: these are TBD
+$category-bookmark-names: (
+    'behind-the-byline',
+    'poetry',
+    'fiction',
+    'nonfiction',
+    'translations'
+);
+
+@each $name in $category-bookmark-names {
+    .entry-category-bookmark-#{$name} {
+        background-image: url('images/bookmark_#{$name}.png');
+    }
+}
+
 .entry-category-bookmark-name {
     font-size: 24px;
     font-family: $font-family-serif;
