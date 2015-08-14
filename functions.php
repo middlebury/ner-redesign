@@ -215,27 +215,11 @@ function ner_after_entry() {
         $category_id = $category[0]->term_id;
         $category_name = $category[0]->name;
 
+        $class_name = str_replace(' ', '-', $category_name);
 
-        // TODO: replace the image urls with appropriate background patterns
-        switch (strtolower($category_name)) {
-            case 'poetry':
-                $bg_url = 'http://localhost:8888/NER/wp-content/uploads/2015/08/NER_1.png';
-                break;
+        $category_slug = strtolower($class_name);
 
-            case 'audio':
-                $bg_url = 'http://localhost:8888/NER/wp-content/uploads/2015/08/NER_2.png';
-                break;
-
-            case 'uncategorized':
-                $bg_url = 'http://localhost:8888/NER/wp-content/uploads/2015/08/NER_3.png';
-                break;
-            
-            default:
-                $bg_url = '';
-                break;
-        }
-    
-        $output .= '<a href="' . get_category_link($category_id) . '" class="entry-category-bookmark" style="background-image: url(\'' . $bg_url . '\');">';
+        $output .= '<a href="' . get_category_link($category_id) . '" class="entry-category-bookmark entry-category-bookmark-' . $category_slug . '">';
         $output .= '<span>Read more</span>';
         $output .= '<span class="entry-category-bookmark-name">' . $category_name . '</span>';
         $output .= '</a>';
