@@ -319,7 +319,7 @@ add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
 // add featured images to single post pages
 add_action( 'genesis_entry_header', 'featured_post_image', 8 );
 function featured_post_image() {
-    if ( is_single() ) { 
+    if ( is_single() ) {
         the_post_thumbnail('medium');
     }
 
