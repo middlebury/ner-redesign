@@ -215,27 +215,11 @@ function ner_after_entry() {
         $category_id = $category[0]->term_id;
         $category_name = $category[0]->name;
 
+        $class_name = str_replace(' ', '-', $category_name);
 
-        // TODO: replace the image urls with appropriate background patterns
-        switch (strtolower($category_name)) {
-            case 'poetry':
-                $bg_url = '//placehold.it/100x100/c0ffee';
-                break;
+        $category_slug = strtolower($class_name);
 
-            case 'audio':
-                $bg_url = '//placehold.it/100x100/bada55';
-                break;
-
-            case 'uncategorized':
-                $bg_url = '//placehold.it/100x100/FA7A55';
-                break;
-            
-            default:
-                $bg_url = '';
-                break;
-        }
-    
-        $output .= '<a href="' . get_category_link($category_id) . '" class="entry-category-bookmark" style="background-image: url(\'' . $bg_url . '\');">';
+        $output .= '<a href="' . get_category_link($category_id) . '" class="entry-category-bookmark entry-category-bookmark-' . $category_slug . '">';
         $output .= '<span>Read more</span>';
         $output .= '<span class="entry-category-bookmark-name">' . $category_name . '</span>';
         $output .= '</a>';
@@ -248,8 +232,21 @@ function ner_after_entry() {
 //* Customize the credits
 add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_filter' );
 function sp_footer_creds_filter( $creds ) {
-    $creds = 'Copyright [footer_copyright] &middot; <a href="https://twitter.com/nerweb" target="_blank">Follow us on Twitter</a> &middot; <a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank">Like us on Facebook</a>';
-    return $creds;
+
+    $fbIconPath = get_bloginfo( 'stylesheet_directory' ) . '/images/facebook.svg';
+    $twitterIconPath = get_bloginfo( 'stylesheet_directory' ) . '/images/twitter.svg';
+
+    // not sure about this since you could add js within the .svg files
+    $fbSvg = file_get_contents($fbIconPath);
+    $twitterSvg = file_get_contents($twitterIconPath);
+
+    $creds = array('Copyright [footer_copyright]');
+
+    $creds[] = '<a href="https://twitter.com/nerweb" target="_blank" class="site-footer-social-link">' . $fbSvg . '</a>';
+
+    $creds[] = '<a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank" class="site-footer-social-link">' . $twitterSvg . '</a>';
+
+    return join(' &middot; ', $creds);
 }
 
 // add notification bar widget
@@ -257,6 +254,12 @@ genesis_register_sidebar( array(
     'id'          => 'notification-bar',
     'name'        => __( 'Notification Bar', 'agency' ),
     'description' => __( 'This is the global bar going across the top of the site.', 'agency' ),
+) );
+
+genesis_register_sidebar( array(
+    'id'          => 'footer-4',
+    'name'        => __( 'Footer 4', 'agency' ),
+    'description' => __( 'Area below footer widgets 1, 2, and 3', 'agency' ),
 ) );
 
 remove_action( 'genesis_before', 'genesis_header_markup_open', 5);
@@ -300,4 +303,24 @@ function ner_notification_bar_body_class( $classes ) {
     return $classes;
 }
 
+add_action( 'genesis_footer', 'ner_footer_widget', 9 );
 
+function ner_footer_widget() {
+    genesis_widget_area( 'footer-4', array(
+        'before' => '<div class="footer-widgets-4 widget-area"><div class="wrap">',
+        'after'  => '</div></div>',
+    ) );
+}
+
+// move featured image on entries (posts on category/archive pages)
+remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
+
+// add featured images to single post pages
+add_action( 'genesis_entry_header', 'featured_post_image', 8 );
+function featured_post_image() {
+    if ( is_single() ) {
+        the_post_thumbnail('medium');
+    }
+
+}

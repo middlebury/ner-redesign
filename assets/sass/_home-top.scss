@@ -40,7 +40,9 @@
 
     &:focus,
     &:hover {
-        background-color: $beige;
+        background-color: $beige-dark;
+        // border-bottom: 1px solid $black;
+        text-decoration: underline;
     }
 
     @include media($screen-sm) {

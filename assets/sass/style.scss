@@ -31,7 +31,7 @@
 @import 'genesis';
 @import 'titles';
 @import 'widgets';
-@import 'featured-content';
+// @import 'featured-content';
 @import 'featured-work';
 @import 'genesis-enews-extended';
 @import 'genesis-latest-tweets';
@@ -77,6 +77,9 @@
     margin-top: 20px;
 }
 
-.backstretch {
-    opacity: .6;
+.list-inline {
+    li {
+        display: inline-block;
+        margin: 5px;
+    }
 }

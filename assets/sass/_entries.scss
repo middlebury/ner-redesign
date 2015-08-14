@@ -1,15 +1,7 @@
 .entry {
     background-color: $beige;
-    margin-bottom: 40px;
-    padding: 40px 40px 24px;
-
-    .single & {
-        padding: 80px 150px 120px;
-
-        @include media($screen-lg) {
-            padding: 40px 40px 24px;
-        }
-    }
+    padding: 40px 8% 24px;
+    margin-bottom: 20px;
 }
 
 .entry-content ol,
@@ -26,7 +18,10 @@
     .single & {
         text-indent: 20px;
         margin-bottom: 0;
-        // line-height: 24px;
+
+        &:first-child {
+            text-indent: 0;
+        }
     }
 }
 
@@ -66,7 +61,7 @@
             border-color: rgba($black, .2);
         }
     }
-    
+
 }
 
 .entry-time {
@@ -82,7 +77,6 @@
 }
 
 .entry-footer .entry-meta {
-    border-top: 2px solid #f5f5f5;
     margin: 0 -40px;
     padding: 32px 40px 8px;
 }
@@ -98,19 +92,49 @@
     display: block;
 }
 
+.entry-header {
+    .single & {
+        .wp-post-image {
+            margin-bottom: 20px;
+        }
+    }
+}
+
 .entry-category-bookmark {
     color: $white;
     font-family: $font-family-sans-serif;
     text-align: center;
     display: inline-block;
     background: $black;
-    margin-top: -40px;
+    margin-left: 8%;
+    margin-top: -20px;
     padding: 30px 50px;
     @include innerBorder($white);
+    background-size: cover;
 
     &:focus,
     &:hover {
         color: darken($white, .5);
+    }
+
+    span {
+        background-color: $black;
+        padding: 5px;
+    }
+}
+
+// TODO: these are TBD
+$category-bookmark-names: (
+    'behind-the-byline',
+    'poetry',
+    'fiction',
+    'nonfiction',
+    'translations'
+);
+
+@each $name in $category-bookmark-names {
+    .entry-category-bookmark-#{$name} {
+        background-image: url('images/bookmark_#{$name}.png');
     }
 }
 
@@ -119,4 +143,23 @@
     font-family: $font-family-serif;
     font-style: italic;
     display: block;
+    margin-top: 5px;
+}
+
+a.more-link {
+    display: inline-block;
+    color: $black;
+    font-family: $font-family-sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    // text-decoration: underline;
+    margin-top: 30px;
+    border-bottom: 1px solid $black;
+
+    &:focus,
+    &:hover {
+        // text-decoration: none;
+        text-decoration: none;
+        border-color: rgba($black, .25);
+    }
 }

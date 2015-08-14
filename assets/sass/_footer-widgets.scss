@@ -17,7 +17,9 @@
 }
 
 .footer-widgets .widget-area {
-    margin-bottom: 30px;
+    @include media($screen-xl) {
+        margin-bottom: 30px;
+    }
 }
 
 .footer-widgets-1,
@@ -43,7 +45,7 @@
 }
 
 .footer-widgets .widget {
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
 }
 
 .footer-widgets li {

@@ -49,30 +49,27 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .entry-content .button {
-    background-color: #222;
+    background-color: $yellow;
     border: none;
-    box-shadow: none;
-    color: #fff;
+    color: $black;
     cursor: pointer;
     font-family: $font-family-sans-serif;
     padding: 16px 24px;
     width: auto;
     appearance: none;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+        background-color: $yellow-dark;
+        color: $black;
+    }
+
 }
 
 .button,
 .entry-content .button {
     display: inline-block;
-}
-
-button:hover,
-input:hover[type="button"],
-input:hover[type="reset"],
-input:hover[type="submit"],
-.button:hover,
-.entry-content .button:hover {
-    background-color: $gray-light;
-    color: $white;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -96,4 +93,5 @@ input[type="search"]::-webkit-search-results-button {
 .input-group-btn {
     display: table-cell;
     vertical-align: top;
+    width: 1%;
 }

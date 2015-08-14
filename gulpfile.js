@@ -11,6 +11,7 @@ var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 var size = require('gulp-size');
+var imagemin = require('gulp-imagemin');
 var del = require('del');
 
 gulp.task('browser-sync', function() {
@@ -31,8 +32,15 @@ gulp.task('clean', function(cb) {
     del([
         './js/*',
         './style.css',
-        './style.css.map'
+        './style.css.map',
+        './images/*'
     ], cb);
+});
+
+gulp.task('images', function() {
+    return gulp.src('./assets/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./images'));
 });
 
 gulp.task('sass', function() {
@@ -64,7 +72,8 @@ gulp.task('js', function() {
         .pipe(reload({ stream: true }))
 });
  
-gulp.task('default', ['clean', 'sass', 'js', 'browser-sync'], function() {
+gulp.task('default', ['clean', 'images', 'sass', 'js', 'browser-sync'], function() {
     gulp.watch('./assets/sass/**/*.scss', ['sass']);
     gulp.watch('./assets/js/**/*.js', ['js']);
+    gulp.watch('./assets/img/*', ['images']);
 });

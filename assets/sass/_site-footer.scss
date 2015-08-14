@@ -9,16 +9,24 @@
     text-transform: uppercase;
 }
 
-.site-footer a {
-    color: $gray-lighter;
-    border-bottom: 1px solid $gray-light;
-}
-
-.site-footer a:hover {
-    color: $gray-lighter;
-    border-color: $gray-lighter;
-}
-
 .site-footer p {
     margin-bottom: 0;
+}
+
+.site-footer-social-link {
+    svg {
+        fill: $gray-lighter;
+        transition: fill .2s;
+    }
+
+    &:focus,
+    &:hover {
+        svg {
+            fill: $white;
+        }
+    }
+}
+
+.site-footer .footer-widgets-4 {
+    margin-bottom: 30px;
 }

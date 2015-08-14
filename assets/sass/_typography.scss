@@ -1,6 +1,6 @@
 body {
     background-color: $black;
-    color: #666;
+    color: $black;
     font-family: $font-family-serif;
     font-size: 16px;
     font-weight: 400;
@@ -16,26 +16,47 @@ input[type="submit"],
 textarea:focus,
 .agency-pro-home .featured-content img,
 .button {
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition:    all 0.1s ease-in-out;
-    -ms-transition:     all 0.1s ease-in-out;
-    -o-transition:      all 0.1s ease-in-out;
-    transition:         all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 ::-moz-selection {
-    background-color: #333;
-    color: #fff;
+    background-color: $gray-dark;
+    color: $white;
 }
 
 ::selection {
-    background-color: #333;
-    color: #fff;
+    background-color: $gray-dark;
+    color: $white;
 }
 
 a {
     color: $black;
     text-decoration: none;
+
+    &:focus {
+        outline: 0;
+    }
+
+    p & {
+        border-bottom: 1px solid $black;
+
+        &:hover,
+        &:focus {
+            border-color: rgba($black, .25);
+        }
+    }
+
+    .footer-widgets .widget_text &,
+    .sidebar .widget_text & {
+        color: $white;
+        border-bottom: 1px solid rgba($white, .5);
+
+        &:hover,
+        &:focus {
+            color: $white;
+            border-color: rgba($white, 1);
+        }
+    }
 }
 
 a img {
@@ -63,7 +84,7 @@ ul {
 
 blockquote,
 blockquote::before {
-    color: #999;
+    color: $black;
 }
 
 blockquote {

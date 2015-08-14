@@ -115,16 +115,16 @@
     
     .home-bottom .featured-content .post:nth-of-type(3n+1),
     .home-middle .featured-content .post:nth-of-type(3n+1) {
-      clear: none;
+      // clear: none;
     }
     
     .home-bottom .featured-content .post:nth-of-type(2n+1),
     .home-middle .featured-content .post:nth-of-type(2n+1) {
-      clear: left;
+      // clear: left;
     }
     
     .agency-pro-home .content .featuredpost .entry {
-        min-height: 380px;
+        // min-height: 380px;
         // width: 50%;
     }
     
@@ -164,7 +164,7 @@
     }
     
     .agency-pro-home .home-middle .featuredpost .entry {
-        min-height: 320px;
+        // min-height: 320px;
     }
     
     .entry-title {
@@ -206,8 +206,8 @@
     }
 
     .agency-pro-home .content .featuredpost .entry {
-        min-height: 380px;
-        width: 100%;
+        // min-height: 380px;
+        // width: 100%;
     }
     
     .agency-pro-home .content .featured-content .entry-header {
