@@ -134,7 +134,7 @@ $category-bookmark-names: (
 
 @each $name in $category-bookmark-names {
     .entry-category-bookmark-#{$name} {
-        background-image: url('images/bookmark_#{$name}.png');
+        background-image: url('images/bookmark-#{$name}.png');
     }
 }
 
