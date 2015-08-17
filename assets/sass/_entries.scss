@@ -110,7 +110,6 @@
     margin-top: -20px;
     padding: 30px 50px;
     @include innerBorder($white);
-    background-size: cover;
 
     &:focus,
     &:hover {
