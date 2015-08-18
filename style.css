@@ -715,15 +715,16 @@ img.alignright,
   margin-right: 24px; }
 
 .entry-title {
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 30px; }
   .single .entry-title {
     margin-bottom: 100px; }
   .entry-title a:focus,
   .entry-title a:hover {
     border-bottom: 1px solid #000; }
 
-.single .subtitle {
-  margin-bottom: 40px; }
+.subtitle {
+  font-size: 30px; }
 
 .entry-title a {
   color: #333; }

@@ -1,5 +1,6 @@
 .entry-title {
     font-weight: 300;
+    font-size: 30px;
 
     .single & {
         margin-bottom: 100px;
@@ -15,9 +16,7 @@
 }
 
 .subtitle {
-    .single & {
-        margin-bottom: 40px;
-    }
+    font-size: 30px;
 }
 
 .entry-title a {
