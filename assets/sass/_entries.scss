@@ -103,14 +103,14 @@
 .entry-category-bookmark {
     color: $white;
     font-family: $font-family-sans-serif;
-    text-align: center;
     display: inline-block;
     background: $black;
     margin-left: 8%;
     margin-top: -20px;
-    padding: 30px 50px;
+    padding: 30px 50px 30px 110px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
     @include innerBorder($white);
-    background-size: cover;
 
     &:focus,
     &:hover {
@@ -134,7 +134,7 @@ $category-bookmark-names: (
 
 @each $name in $category-bookmark-names {
     .entry-category-bookmark-#{$name} {
-        background-image: url('images/bookmark_#{$name}.png');
+        background-image: url('images/bookmark-#{$name}.png');
     }
 }
 

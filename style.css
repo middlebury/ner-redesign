@@ -1127,7 +1127,6 @@ img#wpstats {
     z-index: -1; }
   .home-top .button:focus,
   .home-top .button:hover {
-    background-color: #ffe5c8;
     text-decoration: underline; }
   @media only screen and (max-width: 680px) {
     .home-top .button {
@@ -1260,15 +1259,15 @@ img#wpstats {
 .entry-category-bookmark {
   color: #fff;
   font-family: roboto, helvetica, arial, sans-serif;
-  text-align: center;
   display: inline-block;
   background: #000;
   margin-left: 8%;
   margin-top: -20px;
-  padding: 30px 50px;
+  padding: 30px 50px 30px 110px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   position: relative;
-  z-index: 2;
-  background-size: cover; }
+  z-index: 2; }
   .entry-category-bookmark:after {
     position: absolute;
     width: auto;
@@ -1290,19 +1289,19 @@ img#wpstats {
     padding: 5px; }
 
 .entry-category-bookmark-behind-the-byline {
-  background-image: url("images/bookmark_behind-the-byline.png"); }
+  background-image: url("images/bookmark-behind-the-byline.png"); }
 
 .entry-category-bookmark-poetry {
-  background-image: url("images/bookmark_poetry.png"); }
+  background-image: url("images/bookmark-poetry.png"); }
 
 .entry-category-bookmark-fiction {
-  background-image: url("images/bookmark_fiction.png"); }
+  background-image: url("images/bookmark-fiction.png"); }
 
 .entry-category-bookmark-nonfiction {
-  background-image: url("images/bookmark_nonfiction.png"); }
+  background-image: url("images/bookmark-nonfiction.png"); }
 
 .entry-category-bookmark-translations {
-  background-image: url("images/bookmark_translations.png"); }
+  background-image: url("images/bookmark-translations.png"); }
 
 .entry-category-bookmark-name {
   font-size: 24px;
