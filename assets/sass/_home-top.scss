@@ -1,6 +1,5 @@
 .home-top .wrap {
     color: #fff;
-    // font-family: 'Spinnaker', sans-serif;
     padding: 15% 0;
     text-align: center;
 }
@@ -35,19 +34,16 @@
     & + .button {
         margin-left: 1%;
     }
-    
+
     @include innerBorder();
 
     &:focus,
     &:hover {
-        background-color: $beige-dark;
-        // border-bottom: 1px solid $black;
         text-decoration: underline;
     }
 
     @include media($screen-sm) {
         display: block;
-        // max-width: 380px;
         margin: 10px auto;
         padding: 10px 20px;
         width: auto;
