@@ -242,9 +242,9 @@ function sp_footer_creds_filter( $creds ) {
 
     $creds = array('Copyright [footer_copyright]');
 
-    $creds[] = '<a href="https://twitter.com/nerweb" target="_blank" class="site-footer-social-link">' . $fbSvg . '</a>';
+    $creds[] = '<a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank" class="site-footer-social-link">' . $fbSvg . '</a>';
 
-    $creds[] = '<a href="https://www.facebook.com/pages/New-England-Review/71406219081" target="_blank" class="site-footer-social-link">' . $twitterSvg . '</a>';
+    $creds[] = '<a href="https://twitter.com/nerweb" target="_blank" class="site-footer-social-link">' . $twitterSvg . '</a>';
 
     return join(' &middot; ', $creds);
 }
