@@ -4,7 +4,7 @@
     Author: Middlebury College Digital Services
     Author URI: http://www.middlebury.edu/
     Version: 1.0.0
- 
+
     Template: genesis
     Template Version: 2.1
 */
@@ -146,6 +146,7 @@ input[type="search"] {
 
 .clearfix:before,
 .featured-works:before,
+.pager-nav:before,
 .entry-content:before,
 .entry:before,
 .footer-widgets:before,
@@ -163,6 +164,7 @@ input[type="search"] {
 
 .clearfix:after,
 .featured-works:after,
+.pager-nav:after,
 .entry-content:after,
 .entry:after,
 .footer-widgets:after,
@@ -1575,6 +1577,32 @@ li.comment {
 
 .notification-bar-closed {
   display: none; }
+
+.pager-nav {
+  margin: 50px 0; }
+  .pager-nav a {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+    .pager-nav a:hover,
+    .pager-nav a:focus {
+      border-color: rgba(0, 0, 0, 0.25); }
+
+.pager-nav-item {
+  width: 40%;
+  float: left;
+  overflow: hidden; }
+
+.pager-nav-item-next {
+  text-align: right;
+  float: right; }
+
+.pager-nav-item-prev {
+  float: left;
+  margin-right: 10%; }
 
 @media only screen and (max-width: 1180px) {
   .site-inner,

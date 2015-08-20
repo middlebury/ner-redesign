@@ -324,3 +324,25 @@ function featured_post_image() {
     }
 
 }
+
+add_action( 'genesis_entry_footer', 'ja_prev_next_post_nav' );
+function ja_prev_next_post_nav() {
+	if ( is_singular( 'post' ) ) {
+		echo '<div class="pager-nav">';
+			previous_post_link( '<div class="pager-nav-item pager-nav-item-previous"><small>Previous post</small><br>%link</div>', '%title' );
+			next_post_link( '<div class="pager-nav-item pager-nav-item-next"><small>Next post</small><br>%link</div>', '%title' );
+		echo '</div>';
+	}
+}
+
+//* Customize the next page link
+add_filter ( 'genesis_next_link_text' , 'sp_next_page_link' );
+function sp_next_page_link ( $text ) {
+    return 'Custom Next Page Link &#x000BB;';
+}
+
+//* Customize the previous page link
+add_filter ( 'genesis_prev_link_text' , 'sp_previous_page_link' );
+function sp_previous_page_link ( $text ) {
+    return '&#x000AB; Custom Previous Page Link';
+}
