@@ -6,10 +6,48 @@
 
 .site-header .widget-area li {
     margin: 0;
-    padding: 0;   
+    padding: 0;
 }
 
 .site-header .search-form {
     float: right;
-    margin-top: 24px;
+    margin-top: 8px;
+}
+
+.site-header .widget_nav_menu {
+    float: left;
+
+    @include media($screen-xl) {
+        float: none;
+    }
+}
+
+.site-header .widget_search {
+    float: right;
+
+    @include media($screen-xl) {
+        float: none;
+    }
+}
+
+.site-header .title-area {
+    @include media($screen-sm) {
+        float: left;
+        width: auto;
+        position: relative;
+        z-index: 2;  
+    }
+}
+
+.site-header .widget_nav_menu .responsive-menu-icon {
+    @include media($screen-sm) {
+        float: right;
+    }
+}
+
+.site-header .header-widget-area {
+    @include media($screen-sm) {
+        margin-top: -50px;
+        z-index: -1;
+    }
 }
