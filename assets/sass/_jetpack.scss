@@ -1,3 +1,9 @@
 img#wpstats {
     display: none;
 }
+
+// overwrites some jetpack css modifying forms
+#subscribe-email input {
+    width: 100% !important;
+    padding: 16px !important;
+}
