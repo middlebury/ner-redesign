@@ -24,18 +24,14 @@
 
 .home-top .button {
     color: $black;
-    font-size: 17px;
-    background-color: $beige;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: inline-block;
+    font-size: 16px;
+    background-color: $yellow;
     width: 32%;
 
     & + .button {
         margin-left: 1%;
     }
 
-    @include innerBorder();
 
     &:focus,
     &:hover {
