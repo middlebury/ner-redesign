@@ -334,15 +334,3 @@ function ja_prev_next_post_nav() {
 		echo '</div>';
 	}
 }
-
-//* Customize the next page link
-add_filter ( 'genesis_next_link_text' , 'sp_next_page_link' );
-function sp_next_page_link ( $text ) {
-    return 'Custom Next Page Link &#x000BB;';
-}
-
-//* Customize the previous page link
-add_filter ( 'genesis_prev_link_text' , 'sp_previous_page_link' );
-function sp_previous_page_link ( $text ) {
-    return '&#x000AB; Custom Previous Page Link';
-}
