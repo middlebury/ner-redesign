@@ -465,6 +465,11 @@ input[type="search"]::-webkit-search-results-button {
   vertical-align: top;
   width: 1%; }
 
+/* fix jetpack styles */
+#subscribe-email input {
+  width: 100%;
+  padding: 16px; }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -1444,9 +1449,6 @@ li.comment {
 .sidebar {
   color: #fff;
   font-family: roboto, helvetica, arial, sans-serif; }
-
-.sidebar p:last-child {
-  margin-bottom: 0; }
 
 .sidebar li {
   list-style-type: none;
