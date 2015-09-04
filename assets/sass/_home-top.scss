@@ -1,6 +1,6 @@
 .home-top .wrap {
     color: #fff;
-    padding: 15% 0;
+    padding: 10% 0;
     text-align: center;
 }
 
@@ -19,23 +19,19 @@
     font-weight: normal;
     letter-spacing: .1em;
     text-transform: uppercase;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
 }
 
 .home-top .button {
     color: $black;
-    font-size: 17px;
-    background-color: $beige;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: inline-block;
+    font-size: 16px;
+    background-color: $yellow;
     width: 32%;
 
     & + .button {
         margin-left: 1%;
     }
 
-    @include innerBorder();
 
     &:focus,
     &:hover {
