@@ -465,11 +465,6 @@ input[type="search"]::-webkit-search-results-button {
   vertical-align: top;
   width: 1%; }
 
-/* fix jetpack styles */
-#subscribe-email input {
-  width: 100%;
-  padding: 16px; }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -864,6 +859,10 @@ div.gform_wrapper .gform_footer input[type="submit"] {
 
 img#wpstats {
   display: none; }
+
+#subscribe-email input {
+  width: 100% !important;
+  padding: 16px !important; }
 
 .site-header {
   background-color: #000;
