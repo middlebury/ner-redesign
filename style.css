@@ -1112,7 +1112,7 @@ img#wpstats {
 
 .home-top .wrap {
   color: #fff;
-  padding: 15% 0;
+  padding: 10% 0;
   text-align: center; }
 
 .home-top .widget-title {
@@ -1129,32 +1129,15 @@ img#wpstats {
   font-weight: normal;
   letter-spacing: .1em;
   text-transform: uppercase;
-  margin-bottom: 110px; }
+  margin-bottom: 50px; }
 
 .home-top .button {
   color: #000;
-  font-size: 17px;
-  background-color: #FFF1E2;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  display: inline-block;
-  width: 32%;
-  position: relative;
-  z-index: 2; }
+  font-size: 16px;
+  background-color: #FFCC01;
+  width: 32%; }
   .home-top .button + .button {
     margin-left: 1%; }
-  .home-top .button:after {
-    position: absolute;
-    width: auto;
-    height: auto;
-    left: 5px;
-    top: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 2px solid #000;
-    content: '';
-    display: block;
-    z-index: -1; }
   .home-top .button:focus,
   .home-top .button:hover {
     text-decoration: underline; }
@@ -1289,8 +1272,9 @@ img#wpstats {
 .entry-category-bookmark {
   color: #fff;
   font-family: roboto, helvetica, arial, sans-serif;
+  background-image: url("images/bookmark-default.png");
   display: inline-block;
-  background: #000;
+  background-color: #000;
   margin-left: 8%;
   margin-top: -20px;
   padding: 30px 50px 30px 110px;
