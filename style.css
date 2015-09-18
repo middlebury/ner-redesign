@@ -876,10 +876,15 @@ img#wpstats {
 .admin-bar .site-header {
   top: 32px; }
 
+.site-header .widget_search input[type="search"] {
+  padding: 10px;
+  position: relative;
+  top: 3px; }
+
 .title-area {
   float: left;
   padding: 16px 0;
-  width: 200px; }
+  width: 130px; }
 
 .header-image .title-area {
   padding: 0; }
@@ -932,7 +937,7 @@ img#wpstats {
 .site-header .widget-area {
   float: right;
   text-align: right;
-  width: 800px; }
+  width: 820px; }
 
 .site-header .widget-area li {
   margin: 0;
@@ -1628,7 +1633,7 @@ li.comment {
   .content {
     width: 620px; }
   .site-header .widget-area {
-    width: 730px; }
+    width: 820px; }
   .sidebar-content-sidebar .content,
   .sidebar-sidebar-content .content,
   .content-sidebar-sidebar .content {
