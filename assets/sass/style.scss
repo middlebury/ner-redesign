@@ -107,3 +107,21 @@
         width: 100%;
     }
 }
+
+.beigebox {
+    color: $black;
+    background-color: $beige;
+    padding: 20px;
+    @include innerBorder();
+
+    a {
+        color: $black;
+
+        border-bottom: 1px solid $black;
+
+        &:focus,
+        &:hover {
+            border-color: rgba($black, .25);
+        }
+    }
+}
