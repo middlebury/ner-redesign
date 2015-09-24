@@ -147,6 +147,7 @@ input[type="search"] {
 .clearfix:before,
 .featured-works:before,
 .pager-nav:before,
+.row:before,
 .entry-content:before,
 .entry:before,
 .footer-widgets:before,
@@ -165,6 +166,7 @@ input[type="search"] {
 .clearfix:after,
 .featured-works:after,
 .pager-nav:after,
+.row:after,
 .entry-content:after,
 .entry:after,
 .footer-widgets:after,
@@ -184,7 +186,7 @@ input[type="search"] {
 body {
   background-color: #000;
   color: #000;
-  font-family: "eb garamond", georgia, "times new roman", serif;
+  font-family: "Libre Baskerville", georgia, "times new roman", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.625; }
@@ -214,10 +216,19 @@ a {
   text-decoration: none; }
   a:focus {
     outline: 0; }
-  p a {
+  p a,
+  ul a,
+  ol a,
+  .entry-content div a {
     border-bottom: 1px solid #000; }
     p a:hover,
-    p a:focus {
+    p a:focus,
+    ul a:hover,
+    ul a:focus,
+    ol a:hover,
+    ol a:focus,
+    .entry-content div a:hover,
+    .entry-content div a:focus {
       border-color: rgba(0, 0, 0, 0.25); }
   .footer-widgets .widget_text a,
   .sidebar .widget_text a {
@@ -238,7 +249,9 @@ a:hover {
 
 p {
   margin: 0 0 24px;
-  padding: 0; }
+  padding: 0;
+  font-size: 14px;
+  line-height: 2; }
 
 strong {
   font-weight: 700; }
@@ -417,7 +430,7 @@ input[type="submit"],
 .button,
 .entry-content .button {
   background-color: #FFCC01;
-  border: none;
+  border: 0;
   color: #000;
   cursor: pointer;
   font-family: roboto, helvetica, arial, sans-serif;
@@ -426,7 +439,9 @@ input[type="submit"],
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-size: 14px; }
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap; }
   button:hover,
   button:focus,
   input[type="button"]:hover,
@@ -812,7 +827,7 @@ img.alignright,
   color: #fff; }
   .featured-work-content h3 {
     font-style: italic;
-    font-family: "eb garamond", georgia, "times new roman", serif;
+    font-family: "Libre Baskerville", georgia, "times new roman", serif;
     font-weight: normal;
     font-size: 36px;
     line-height: 1.2;
@@ -893,7 +908,7 @@ img#wpstats {
   cursor: pointer; }
 
 .site-title {
-  font-family: "eb garamond", georgia, "times new roman", serif;
+  font-family: "Libre Baskerville", georgia, "times new roman", serif;
   font-size: 28px;
   line-height: 1;
   margin: 0;
@@ -998,7 +1013,7 @@ img#wpstats {
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .v .current-menu-item > a:hover {
-  border-color: #FFF1E2; }
+  border-top-color: #FFF1E2; }
 
 .genesis-nav-menu .sub-menu .current-menu-item > a {
   color: #999; }
@@ -1093,7 +1108,7 @@ img#wpstats {
 
 .agency-pro-home .content .featured-content .widget-title,
 .agency-pro-home .content .widget_text .widget-title {
-  font-family: "eb garamond", georgia, "times new roman", serif;
+  font-family: "Libre Baskerville", georgia, "times new roman", serif;
   font-size: 36px;
   letter-spacing: .1em;
   text-align: center;
@@ -1121,20 +1136,19 @@ img#wpstats {
 
 .home-top .wrap {
   color: #fff;
-  padding: 10% 0;
-  text-align: center; }
+  padding: 10% 0; }
 
 .home-top .widget-title {
   color: #fff;
   font-size: 60px;
-  font-family: "eb garamond", georgia, "times new roman", serif;
+  font-family: "Libre Baskerville", georgia, "times new roman", serif;
   line-height: 1;
   text-transform: none;
   margin-bottom: 35px; }
 
 .home-top .textwidget h2 {
-  font-size: 24px;
-  font-family: "eb garamond", georgia, "times new roman", serif;
+  font-size: 18px;
+  font-family: "Libre Baskerville", georgia, "times new roman", serif;
   font-weight: normal;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -1142,7 +1156,7 @@ img#wpstats {
 
 .home-top .button {
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #FFCC01;
   width: 32%; }
   .home-top .button + .button {
@@ -1217,7 +1231,6 @@ img#wpstats {
   margin-bottom: 26px; }
 
 .entry-content p {
-  font-size: 19px;
   color: #000; }
   .single .entry-content p {
     text-indent: 20px;
@@ -1328,7 +1341,7 @@ img#wpstats {
 
 .entry-category-bookmark-name {
   font-size: 24px;
-  font-family: "eb garamond", georgia, "times new roman", serif;
+  font-family: "Libre Baskerville", georgia, "times new roman", serif;
   font-style: italic;
   display: block;
   margin-top: 5px; }
@@ -1516,7 +1529,7 @@ li.comment {
 
 .footer-widgets li {
   list-style-type: none;
-  margin-bottom: 6px; }
+  margin-top: 10px; }
 
 .menu-footer-menu-container {
   font-family: roboto, helvetica, arial, sans-serif; }
@@ -1818,11 +1831,61 @@ li.comment {
   overflow: hidden;
   display: block; }
 
+.text-center {
+  text-align: center; }
+
 .margin-top-1 {
   margin-top: 20px; }
 
 .list-inline li {
   display: inline-block;
   margin: 5px; }
+
+.col {
+  float: left;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.col-half {
+  width: 50%; }
+  @media only screen and (max-width: 782px) {
+    .col-half {
+      width: 100%; } }
+
+.beigebox {
+  color: #000;
+  background-color: #FFF1E2;
+  padding: 20px;
+  position: relative;
+  z-index: 2; }
+  .beigebox:after {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px solid #000;
+    content: '';
+    display: block;
+    z-index: -1; }
+  .beigebox a {
+    color: #000;
+    border-bottom: 1px solid #000; }
+    .beigebox a:focus,
+    .beigebox a:hover {
+      border-color: rgba(0, 0, 0, 0.25); }
+
+.transparentbox {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px; }
+  .transparentbox a:not(.button) {
+    color: #fff;
+    border-bottom: 1px solid #fff; }
+    .transparentbox a:not(.button):focus,
+    .transparentbox a:not(.button):hover {
+      border-color: rgba(255, 255, 255, 0.25); }
 
 /*# sourceMappingURL=style.css.map */
