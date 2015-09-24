@@ -37,7 +37,10 @@ a {
         outline: 0;
     }
 
-    p & {
+    p &,
+    ul &,
+    ol &,
+    .entry-content div & {
         border-bottom: 1px solid $black;
 
         &:hover,
@@ -70,6 +73,8 @@ a:hover {
 p {
     margin: 0 0 24px;
     padding: 0;
+    font-size: 14px;
+    line-height: 2;
 }
 
 strong {

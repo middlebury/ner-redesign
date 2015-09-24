@@ -74,6 +74,10 @@
     display: block;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .margin-top-1 {
     margin-top: 20px;
 }
@@ -82,5 +86,59 @@
     li {
         display: inline-block;
         margin: 5px;
+    }
+}
+
+.row {
+    @extend .clearfix;
+}
+
+.col {
+    float: left;
+    min-height: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.col-half {
+    width: 50%;
+
+    @include media($screen-md) {
+        width: 100%;
+    }
+}
+
+.beigebox {
+    color: $black;
+    background-color: $beige;
+    padding: 20px;
+    @include innerBorder();
+
+    a {
+        color: $black;
+
+        border-bottom: 1px solid $black;
+
+        &:focus,
+        &:hover {
+            border-color: rgba($black, .25);
+        }
+    }
+}
+
+.transparentbox {
+    background-color: rgba($black, .5);
+    padding: 20px;
+    // @include innerBorder($white);
+
+    a:not(.button) {
+        color: $white;
+
+        border-bottom: 1px solid $white;
+
+        &:focus,
+        &:hover {
+            border-color: rgba($white, .25);
+        }
     }
 }

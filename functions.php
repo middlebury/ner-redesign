@@ -37,7 +37,7 @@ function agency_load_scripts() {
     wp_enqueue_style( 'dashicons' );
 
     // wp_deregister_script( 'jquery-migrate' );
-    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=EB+Garamond|Roboto:300,400,700', array(), CHILD_THEME_VERSION );
+    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700|Roboto:300,400,700', array(), CHILD_THEME_VERSION );
 
 }
 
@@ -333,4 +333,14 @@ function ja_prev_next_post_nav() {
 			next_post_link( '<div class="pager-nav-item pager-nav-item-next"><small>Next post</small><br>%link</div>', '%title' );
 		echo '</div>';
 	}
+}
+
+/** Exclude certain category from posts */
+add_action( 'pre_get_posts', 'be_exclude_category_from_blog' );
+function be_exclude_category_from_blog( $query ) {
+
+    if( $query->is_home() ) {
+        $query->set( 'cat', '-147182,-437,-376025,-375807,-375806,-721580' );
+        //fiction, poetry, NER digital, nonfiction, translations, behind the byline
+    }
 }
