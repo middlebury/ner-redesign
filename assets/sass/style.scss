@@ -125,3 +125,20 @@
         }
     }
 }
+
+.transparentbox {
+    background-color: rgba($black, .5);
+    padding: 20px;
+    // @include innerBorder($white);
+
+    a:not(.button) {
+        color: $white;
+
+        border-bottom: 1px solid $white;
+
+        &:focus,
+        &:hover {
+            border-color: rgba($white, .25);
+        }
+    }
+}
