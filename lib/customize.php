@@ -28,7 +28,7 @@ class Child_Agency_Image_Control extends WP_Customize_Image_Control {
 
 		$this->add_tab( 'upload-new', __( 'Upload New', 'agency' ), array( $this, 'tab_upload_new' ) );
 		$this->add_tab( 'uploaded',   __( 'Uploaded', 'agency' ), array( $this, 'tab_uploaded' ) );
-		
+
 		if ( $this->setting->default )
 			$this->add_tab( 'default',  __( 'Default', 'agency' ), array( $this, 'tab_default_background' ) );
 
@@ -43,7 +43,7 @@ class Child_Agency_Image_Control extends WP_Customize_Image_Control {
 	public function tab_default_background() {
 		$this->print_tab_image( $this->setting->default );
 	}
-	
+
 }
 
 
@@ -58,8 +58,9 @@ $wp_customize->add_section( 'agency-image', array(
 $wp_customize->add_setting( 'agency-backstretch-image', array(
 	'default'  => sprintf( '%s/images/bg.jpg', get_stylesheet_directory_uri() ),
 	'type'     => 'option',
+	'sanitize_callback' => 'esc_url',
 ) );
- 
+
 $wp_customize->add_control(
 	new Child_Agency_Image_Control(
 		$wp_customize,

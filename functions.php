@@ -45,7 +45,7 @@ function agency_load_scripts() {
 add_action( 'wp_enqueue_scripts', 'agency_enqueue_backstretch_scripts' );
 function agency_enqueue_backstretch_scripts() {
 
-    $image = get_option( 'agency-backstretch-image', sprintf( '%s/images/bg.jpg', get_stylesheet_directory_uri() ) );
+    $image = esc_url( get_option( 'agency-backstretch-image', sprintf( '%s/images/bg.jpg', get_stylesheet_directory_uri() ) ) );
 
     //* Load scripts only if custom backstretch image is being used
     if ( ! empty( $image ) ) {
