@@ -1,4 +1,4 @@
 node_modules
 *.map
 style.css
-js/
+js/**/*.js
