@@ -20,7 +20,7 @@ gulp.task('browser-sync', function() {
         './js/*.js',
         './*.php'
     ];
- 
+
     browserSync.init(files, {
         proxy: 'localhost:8888/NER/',
         notify: false,
@@ -56,7 +56,7 @@ gulp.task('sass', function() {
         .pipe(autoprefixer('last 2 versions'))
         .pipe(gutil.env.type === 'production' ? cmq() : gutil.noop())
         .pipe(gutil.env.type === 'production' ? minifyCss() : gutil.noop())
-        .pipe(sourcemaps.write('./'))
+        .pipe(gutil.env.type !== 'production' ? sourcemaps.write('./') : gutil.noop())
         .pipe(size({ showFiles: true }))
         .pipe(gulp.dest('./'))
         .pipe(reload({ stream: true }));
@@ -66,12 +66,12 @@ gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
-        .pipe(sourcemaps.write('./'))
+        .pipe(gutil.env.type !== 'production' ? sourcemaps.write('./') : gutil.noop())
         .pipe(size({ showFiles: true }))
         .pipe(gulp.dest('./js'))
         .pipe(reload({ stream: true }))
 });
- 
+
 gulp.task('default', ['clean', 'images', 'sass', 'js', 'browser-sync'], function() {
     gulp.watch('./assets/sass/**/*.scss', ['sass']);
     gulp.watch('./assets/js/**/*.js', ['js']);
