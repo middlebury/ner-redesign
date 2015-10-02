@@ -19,16 +19,6 @@ textarea:focus,
     transition: all 0.1s ease-in-out;
 }
 
-::-moz-selection {
-    background-color: $gray-dark;
-    color: $white;
-}
-
-::selection {
-    background-color: $gray-dark;
-    color: $white;
-}
-
 a {
     color: $black;
     text-decoration: none;
