@@ -2,8 +2,8 @@
 .entry-pings,
 .comment-respond,
 .entry-comments {
-    background-color: #fff;
-    border-radius: 3px;
+    background-color: $beige;
+    // border-radius: 3px;
     margin-bottom: 40px;
     padding: 40px;
 }
@@ -20,6 +20,10 @@
 .comment-respond input[type="text"],
 .comment-respond input[type="url"] {
     width: 50%
+}
+
+.comment-form-comment #comment {
+    width: 100% !important;
 }
 
 .comment-respond label {
