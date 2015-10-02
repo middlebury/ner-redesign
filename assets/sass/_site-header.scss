@@ -6,6 +6,10 @@
     top: 0;
     width: 100%;
     z-index: 999;
+
+    @include media($screen-md) {
+        position: static;
+    }
 }
 
 .admin-bar .site-header {
