@@ -1,25 +1,2 @@
-jQuery(function( $ ){
-
-	$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon"></div>');
-
-	$(".responsive-menu-icon").click(function(){
-		$(this).next("header .genesis-nav-menu, .nav-primary .genesis-nav-menu").slideToggle();
-	});
-
-	$(window).resize(function(){
-		if(window.innerWidth > 680) {
-			$("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, nav .sub-menu").removeAttr("style");
-			$(".responsive-menu > .menu-item").removeClass("menu-open");
-		}
-	});
-
-	$(".responsive-menu > .menu-item").click(function(event){
-		if (event.target !== this)
-		return;
-			$(this).find(".sub-menu:first").slideToggle(function() {
-			$(this).parent().toggleClass("menu-open");
-		});
-	});
-
-});
+jQuery(function(e){e("header .genesis-nav-menu, .nav-primary .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon"></div>'),e(".responsive-menu-icon").click(function(){e(this).next("header .genesis-nav-menu, .nav-primary .genesis-nav-menu").slideToggle()}),e(window).resize(function(){window.innerWidth>680&&(e("header .genesis-nav-menu, .nav-primary .genesis-nav-menu, nav .sub-menu").removeAttr("style"),e(".responsive-menu > .menu-item").removeClass("menu-open"))}),e(".responsive-menu > .menu-item").click(function(n){n.target===this&&e(this).find(".sub-menu:first").slideToggle(function(){e(this).parent().toggleClass("menu-open")})})});
 //# sourceMappingURL=responsive-menu.js.map
