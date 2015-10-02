@@ -1,7 +1,7 @@
 .site-header .widget-area {
     float: right;
     text-align: right;
-    width: 820px;
+    width: 830px;
 }
 
 .site-header .widget-area li {
@@ -16,9 +16,11 @@
 
 .site-header .widget_nav_menu {
     float: left;
+    // margin-top: -50px;
 
     @include media($screen-xl) {
         float: none;
+        margin-top: 0;
     }
 }
 
