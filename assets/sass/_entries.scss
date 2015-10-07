@@ -13,15 +13,6 @@
 
 .entry-content p {
     color: $black;
-
-    .single & {
-        text-indent: 20px;
-        margin-bottom: 0;
-
-        &:first-child {
-            text-indent: 0;
-        }
-    }
 }
 
 .entry-content ol,
