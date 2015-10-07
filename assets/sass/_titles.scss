@@ -2,10 +2,6 @@
     font-weight: 300;
     font-size: 30px;
 
-    .single & {
-        margin-bottom: 100px;
-    }
-
     a {
         &:focus,
         &:hover {
@@ -13,6 +9,13 @@
         }
     }
 
+}
+
+h1.entry-title {
+    .single &,
+    .page & {
+        margin-bottom: 100px;
+    }
 }
 
 .subtitle {
