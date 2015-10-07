@@ -61,15 +61,20 @@
 
 .genesis-nav-menu .sub-menu .sub-menu {
     margin: 0 0 0 179px;
+    // left: 179px;
 }
 
 .genesis-nav-menu .menu-item:hover {
-    position: static;
+    position: relative;
 }
 
 .genesis-nav-menu .menu-item:hover > .sub-menu {
     left: auto;
     opacity: 1;
+
+    .sub-menu {
+        top: 0;
+    }
 }
 
 .genesis-nav-menu > .first > a {
