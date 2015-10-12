@@ -342,7 +342,7 @@ function be_exclude_category_from_blog( $query ) {
 
 
 add_filter('genesis_subtitles_output', 'ner_subtitle_output_filter');
-function ner_subtitle_output_filter( $output, $subtitle ) {
+function ner_subtitle_output_filter( $output ) {
     global $post;
 
     $subtitle = get_post_meta( $post->ID, '_ahjira_subtitle', TRUE );
