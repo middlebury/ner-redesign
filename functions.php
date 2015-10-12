@@ -339,3 +339,19 @@ function be_exclude_category_from_blog( $query ) {
         //fiction, poetry, NER digital, nonfiction, translations, behind the byline
     }
 }
+
+
+add_filter('genesis_subtitles_output', 'ner_subtitle_output_filter');
+function ner_subtitle_output_filter( $output, $subtitle ) {
+    global $post;
+
+    $subtitle = get_post_meta( $post->ID, '_ahjira_subtitle', TRUE );
+    $permalink = get_permalink( $post->ID );
+
+    $title_contents = is_single() ? $subtitle : sprintf( '<a href="%s">%s</a>', $permalink, $subtitle );
+
+    $output = sprintf( '<h2 class="subtitle">%s</h2>', $title_contents );
+
+    return $output;
+
+}
