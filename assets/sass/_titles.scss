@@ -1,6 +1,6 @@
 .entry-title {
-    font-weight: 300;
     font-size: 30px;
+    font-weight: 700;
 
     a {
         &:focus,
@@ -11,10 +11,11 @@
 
 }
 
-h1.entry-title {
+h2.subtitle {
     .single &,
     .page & {
         margin-bottom: 100px;
+        font-weight: 300;
     }
 }
 
