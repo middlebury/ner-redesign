@@ -12,11 +12,10 @@
 }
 
 h2.subtitle {
-    font-weight: 300;
-
     .single &,
     .page & {
         margin-bottom: 100px;
+        font-weight: 300;
     }
 }
 
