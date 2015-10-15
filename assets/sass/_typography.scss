@@ -104,3 +104,12 @@ blockquote::before {
 cite {
     font-style: normal;
 }
+
+.dropcap {
+    float: left;
+    font-size: 84px;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    padding-right: 5px;
+}
